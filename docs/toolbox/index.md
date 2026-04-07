@@ -1,7 +1,10 @@
 ---
+title: "工具箱"
 hide:
   - toc
 ---
+
+<style>.md-content h1 { display: none !important; }</style>
 
 工具本身不重要，用工具解决问题才重要。
 

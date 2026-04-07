@@ -71,7 +71,10 @@ hide:
 <div style="border:1px solid var(--wiki-card-border);border-radius:12px;padding:1.2rem 1.5rem;background:var(--wiki-card-bg);max-width:480px;">
 <p style="margin:0 0 0.5rem;font-weight:600;">订阅更新</p>
 <p style="margin:0 0 0.8rem;font-size:0.8rem;color:var(--wiki-muted);">每周一封，不水不卷。新文章、新工具、新想法，直接送到你邮箱。</p>
-<a href="https://github.com/gy-hou/publicwiki/issues/new?title=Subscribe&body=我想订阅更新" target="_blank" style="display:inline-block;padding:0.45rem 1.2rem;border-radius:8px;background:var(--wiki-accent);color:white;text-decoration:none;font-size:0.82rem;font-weight:600;">订阅（GitHub Issue）</a>
+<form action="https://buttondown.com/api/emails/embed-subscribe/gy-hou" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/gy-hou','popupwindow')" style="display:flex;gap:0.5rem;">
+<input type="email" name="email" placeholder="your@email.com" required style="flex:1;padding:0.45rem 0.7rem;border:1px solid var(--wiki-card-border);border-radius:8px;font-size:0.82rem;background:transparent;color:inherit;">
+<input type="submit" value="订阅" style="padding:0.45rem 1.2rem;border-radius:8px;background:var(--wiki-accent);color:white;border:none;font-size:0.82rem;font-weight:600;cursor:pointer;">
+</form>
 </div>
 
 [prompt](tags.md){ .md-tag }

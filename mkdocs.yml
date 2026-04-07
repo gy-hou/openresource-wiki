@@ -154,30 +154,18 @@ nav:
     - blog/index.md
   - Prompt 库:
     - prompts/index.md
-    - ⭐ 自研:
-      - Claude Code 工程化工作流: prompts/coding/claude-code-workflow.md
-      - 技术博客写作: prompts/writing/tech-blog-writer.md
-      - LLM 知识库管理: prompts/research/knowledge-base-manager.md
-    - 编程:
-      - prompts/coding/index.md
-      - 代码审查 Prompt: prompts/coding/code-review-prompt.md
-    - 写作:
-      - prompts/writing/index.md
-      - 小红书爆款帖子写作: prompts/writing/xiaohongshu-writer.md
-    - 研究:
-      - prompts/research/index.md
-      - 论文精读 Prompt: prompts/research/paper-reader.md
-    - System Prompts:
-      - prompts/system/index.md
-      - 通用 AI 助手模板: prompts/system/ai-assistant-system.md
+    - ⭐ CC 工程化工作流: prompts/coding/claude-code-workflow.md
+    - ⭐ 技术博客写作: prompts/writing/tech-blog-writer.md
+    - ⭐ LLM 知识库管理: prompts/research/knowledge-base-manager.md
+    - 代码审查: prompts/coding/code-review-prompt.md
+    - 小红书写作: prompts/writing/xiaohongshu-writer.md
+    - 论文精读: prompts/research/paper-reader.md
+    - System Prompt 模板: prompts/system/ai-assistant-system.md
   - Skills 库:
     - skills/index.md
-    - ⭐ 自研:
-      - 小红书知识卡片生成器: skills/templates/xhs-card-generator.md
-      - 博客标签自动提取: skills/templates/auto-tag-extractor.md
-    - 收集:
-      - skills/templates/index.md
-      - LLM Wiki 管理 Agent: skills/templates/llm-wiki-agent.md
+    - ⭐ 小红书卡片生成器: skills/templates/xhs-card-generator.md
+    - ⭐ 标签自动提取: skills/templates/auto-tag-extractor.md
+    - LLM Wiki Agent: skills/templates/llm-wiki-agent.md
   - 工具箱:
     - toolbox/index.md
     - AI 平台:

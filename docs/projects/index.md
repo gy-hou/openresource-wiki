@@ -1,7 +1,10 @@
 ---
+title: "项目"
 hide:
   - toc
 ---
+
+<style>.md-content h1 { display: none !important; }</style>
 
 做东西比想东西难，但做出来的那一刻值得。
 
