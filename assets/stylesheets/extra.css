@@ -324,6 +324,78 @@ body {
 }
 
 /* ═══════════════════════════════════════
+   Featured Carousel
+   ═══════════════════════════════════════ */
+
+.featured-carousel {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0 1rem;
+  margin: 0 -0.5rem;
+  scrollbar-width: none;
+}
+
+.featured-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: white !important;
+  position: relative;
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.featured-card:hover {
+  transform: translateY(-3px);
+}
+
+.featured-card-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.featured-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  z-index: 0;
+}
+
+/* Featured card color themes */
+.featured-card--blue { background: linear-gradient(135deg, #1a237e, #42a5f5); }
+.featured-card--green { background: linear-gradient(135deg, #1b5e20, #66bb6a); }
+.featured-card--purple { background: linear-gradient(135deg, #4a148c, #ab47bc); }
+.featured-card--orange { background: linear-gradient(135deg, #e65100, #ffa726); }
+.featured-card--teal { background: linear-gradient(135deg, #004d40, #26a69a); }
+
+@media screen and (max-width: 45em) {
+  .featured-card {
+    flex: 0 0 160px;
+    height: 120px;
+  }
+  .featured-card-title {
+    font-size: 0.75rem;
+  }
+}
+
+/* ═══════════════════════════════════════
    Repository & Social Cards
    ═══════════════════════════════════════ */
 
@@ -607,10 +679,26 @@ a:hover .xhs-card {
   margin-bottom: 0.1rem !important;
 }
 
-/* Smaller "继续阅读" */
+/* ">> 继续阅读" button style */
 .md-post .md-post__content .md-content__button {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 6px;
+  background: var(--wiki-accent);
+  color: white !important;
   font-size: 0.75rem;
-  margin-top: 0.15rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin-top: 0.3rem;
+  transition: opacity 0.2s;
+}
+
+.md-post .md-post__content .md-content__button:hover {
+  opacity: 0.85;
+}
+
+.md-post .md-post__content .md-content__button::before {
+  content: "» ";
 }
 
 /* Hide redundant blog page H1 (nav already shows 博客) */
