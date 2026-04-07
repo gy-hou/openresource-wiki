@@ -12,12 +12,9 @@ hide:
 
 ## 关于我
 
-🎓 USTC
+🎓 USTC · 🤖 专注 AI 工具测评 / 前沿模型解读 / Fintech · 📩 学术间歇性输出，专注科研半挂
 
-🤖 专注AI工具测评 / 前沿模型解读 / Fintech
-
-📩 学术间歇性输出，专注科研半挂
-
+{{ card_row(github_stats("gy-hou"), xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6283)) }}
 
 ## 板块导航
 
@@ -61,12 +58,6 @@ hide:
 
 </div>
 
-!!! info "为什么做这个 Wiki"
-    - 小红书有字数限制，很多干货只能做成图片。
-    - 图片里的代码和 Prompt 没法复制，读者体验会被打断。
-    - 很多想分享的知识/技术太敏感。
-    - 这里的内容都尽量做到“看完就能复制使用”。
-
 ## 最近更新
 
 | 日期 | 内容 | 板块 |
@@ -75,27 +66,28 @@ hide:
 | 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/posts/2026-03-18openclaw guide.md) | 博客 |
 | 2026-04-01 | [DeepSeek API 完全使用指南](blog/posts/2026-04-01-deepseek-api-guide.md) | 博客 |
 | 2026-03-25 | [Claude Code 进阶使用技巧](blog/posts/2026-03-25-claude-code-tips.md) | 博客 |
-| 2026-03-10 | [Claude Code 泄漏版：智能体长期记忆与自我进化](blog/posts/2026-03-10-prompt-engineering-101.md) | 博客 |
-| 2026-04-06 | [代码审查 Prompt](prompts/coding/code-review-prompt.md) | Prompt 库 |
-| 2026-04-05 | [小红书知识卡片生成器](skills/templates/xhs-card-generator.md) | Skills 库 |
+| 2026-03-10 | [Claude Code 泄漏版：记忆系统与自我进化](blog/posts/2026-03-10-prompt-engineering-101.md) | 博客 |
 
-<!-- TODO: 后续可以用插件自动生成 -->
-
-## 统计与链接
-
-- 内容统计：`5` 篇博客 / `4` 个 Prompts / `2` 个 Skills
-- RSS 订阅：[:material-rss: feed_rss_created.xml](https://gy-hou.github.io/publicwiki/feed_rss_created.xml)
-- 贡献内容：[查看 CONTRIBUTING.md](https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md)
-
-{{ card_row(github_stats("gy-hou"), xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6219)) }}
+!!! info "为什么做这个 Wiki"
+    - 小红书有字数限制，很多干货只能做成图片
+    - 图片里的代码和 Prompt 没法复制，读者体验会被打断
+    - 很多想分享的知识 / 技术太敏感
+    - 这里的内容都尽量做到"看完就能复制使用"
 
 ## 🏷️ 热门标签
 
 [prompt](tags.md){ .md-tag }
 [Claude](tags.md){ .md-tag }
-[教程](tags.md){ .md-tag }
 [Claude Code](tags.md){ .md-tag }
-[skill](tags.md){ .md-tag }
-[编程](tags.md){ .md-tag }
 [DeepSeek](tags.md){ .md-tag }
+[教程](tags.md){ .md-tag }
+[编程](tags.md){ .md-tag }
 [写作](tags.md){ .md-tag }
+[skill](tags.md){ .md-tag }
+
+---
+
+<p style="text-align:center;font-size:0.75rem;opacity:0.6;">
+RSS 订阅：<a href="https://gy-hou.github.io/publicwiki/feed_rss_created.xml">feed_rss_created.xml</a>
+· <a href="https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md">贡献内容</a>
+</p>

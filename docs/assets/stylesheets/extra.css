@@ -148,6 +148,14 @@ body {
   line-height: 1.7;
 }
 
+.card-meta {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--wiki-muted);
+  opacity: 0.75;
+}
+
 .md-typeset .md-tag {
   border-radius: 999px;
   border: 1px solid rgba(63, 81, 181, 0.25);
@@ -347,17 +355,71 @@ body {
   margin: 0 auto;
 }
 
-/* GitHub stats card light/dark switching */
-.gh-stats-dark {
-  display: none;
+/* GitHub Profile Card */
+.gh-profile-card {
+  border: 1px solid var(--wiki-card-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background-color: var(--wiki-card-bg);
+  text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-[data-md-color-scheme="slate"] .gh-stats-light {
-  display: none;
+.gh-profile-card:hover,
+a:hover .gh-profile-card {
+  border-color: #24292f;
+  box-shadow: 0 2px 12px rgba(36, 41, 47, 0.12);
 }
 
-[data-md-color-scheme="slate"] .gh-stats-dark {
+[data-md-color-scheme="slate"] .gh-profile-card:hover,
+[data-md-color-scheme="slate"] a:hover .gh-profile-card {
+  border-color: #58a6ff;
+  box-shadow: 0 2px 12px rgba(88, 166, 255, 0.15);
+}
+
+.gh-profile-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gh-logo-area { flex-shrink: 0; }
+
+.gh-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: block;
+}
+
+.gh-info { flex: 1; min-width: 0; }
+
+.gh-platform {
+  font-size: 0.7rem;
+  color: #24292f;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+[data-md-color-scheme="slate"] .gh-platform {
+  color: #58a6ff;
+}
+
+.gh-username {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.gh-arrow {
+  flex-shrink: 0;
+  opacity: 0.4;
+  color: inherit;
+}
+
+.gh-arrow svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* XHS Note Card */

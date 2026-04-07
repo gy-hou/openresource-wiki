@@ -35,11 +35,12 @@ def define_env(env):
 </div>"""
 
     @env.macro
-    def xhs_profile(name, xhs_id, fans=0, likes_total=0, desc=""):
+    def xhs_profile(name, xhs_id, fans=0, likes_total=0, desc="", url=""):
         """小红书主页 profile 卡片."""
         desc_line = desc if desc else f"{fans} 粉丝 · {likes_total} 获赞与收藏"
+        href = url if url else f"https://www.xiaohongshu.com/user/profile/{xhs_id}"
         return f"""<div class="repo-card">
-<a href="https://www.xiaohongshu.com/user/profile/{xhs_id}" target="_blank" rel="noopener noreferrer">
+<a href="{href}" target="_blank" rel="noopener noreferrer">
 <div class="xhs-card">
   <div class="xhs-card-inner">
     <div class="xhs-logo-area">
@@ -60,11 +61,23 @@ def define_env(env):
 
     @env.macro
     def github_stats(username, vercel_url="https://github-readme-stats-ten-mu-29.vercel.app"):
-        """GitHub 用户统计卡片 (light/dark)."""
+        """GitHub 主页卡片（profile card 样式）."""
         return f"""<div class="repo-card">
 <a href="https://github.com/{username}" target="_blank" rel="noopener noreferrer">
-<img class="gh-card-img gh-stats-light" src="{vercel_url}/api/?username={username}&theme=default&show_icons=true" alt="{username} GitHub stats">
-<img class="gh-card-img gh-stats-dark" src="{vercel_url}/api/?username={username}&theme=dark&show_icons=true" alt="{username} GitHub stats">
+<div class="gh-profile-card">
+  <div class="gh-profile-inner">
+    <div class="gh-logo-area">
+      <svg class="gh-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="10" fill="#24292f"/><path d="M20 8a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.76c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.56 2.56 0 0 0 3.5 1 2.56 2.56 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.38 11.38 0 0 1 6.01 0c2.3-1.55 3.3-1.23 3.3-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92a2.87 2.87 0 0 1 .82 2.23v3.29c0 .32.21.7.82.58A12 12 0 0 0 20 8z" fill="white"/></svg>
+    </div>
+    <div class="gh-info">
+      <div class="gh-platform">GitHub</div>
+      <div class="gh-username">@{username}</div>
+    </div>
+    <div class="gh-arrow">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </div>
+</div>
 </a>
 </div>"""
 
