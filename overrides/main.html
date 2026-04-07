@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% set page_title = (page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name)) %}
+  {% set page_description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
+  {% set page_url = (page.canonical_url if page and page.canonical_url else config.site_url) %}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }} - AI Wiki">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:site_name" content="AI Wiki">
+  <meta property="og:image" content="{{ config.site_url }}assets/images/og-default.png">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }} - AI Wiki">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ config.site_url }}assets/images/og-default.png">
+
+  <!-- 额外 SEO -->
+  <meta name="author" content="gy-hou">
+  <link rel="canonical" href="{{ page_url }}">
+
+  {% if page and page.meta and page.meta.date %}
+  <meta property="article:published_time" content="{{ page.meta.date }}">
+  {% endif %}
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="AI Wiki" href="{{ config.site_url }}feed_rss_created.xml">
+{% endblock %}

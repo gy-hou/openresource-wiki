@@ -1,0 +1,96 @@
+name: Content Check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+
+jobs:
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build check (strict mode)
+        run: mkdocs build --strict
+
+  content-lint:
+    name: Content Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run content linter
+        run: python scripts/lint_content.py --docs-dir docs/
+
+  link-check:
+    name: Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Check internal links
+        run: |
+          python -c "
+          import os, re
+          site_dir = 'site'
+          broken = []
+          for root, dirs, files in os.walk(site_dir):
+              for f in files:
+                  if not f.endswith('.html'):
+                      continue
+                  filepath = os.path.join(root, f)
+                  with open(filepath, encoding='utf-8') as fh:
+                      content = fh.read()
+                  # 检查内部 href
+                  for match in re.finditer(r'href=\"(/publicwiki/[^\"#]+)\"', content):
+                      link = match.group(1).replace('/publicwiki/', '')
+                      target = os.path.join(site_dir, link)
+                      if not os.path.exists(target) and not os.path.exists(target + '/index.html'):
+                          broken.append(f'{filepath}: {match.group(1)}')
+          if broken:
+              print(f'Found {len(broken)} broken internal links:')
+              for b in broken[:20]:
+                  print(f'  {b}')
+              # 暂时不 fail，只 warn
+              # sys.exit(1)
+          else:
+              print('No broken internal links found')
+          "

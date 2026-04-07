@@ -1,0 +1,142 @@
+---
+date: 2026-03-25
+authors:
+  - gy-hou
+categories:
+  - AI 工具
+tags:
+  - Claude
+  - Claude Code
+  - 效率
+---
+
+# Claude Code 进阶使用技巧
+
+> 10 个高频技巧，帮你把 Claude Code 用得更稳更快
+
+<!-- more -->
+
+## TL;DR
+
+如果你已经会基础对话式改代码，下一步就是建立“任务拆分 + 验证闭环 + 输出规范”。这篇内容用 10 个可直接执行的技巧带你完成升级。
+
+<!-- TODO: 替换为真实内容 -->
+
+## 基础配置
+
+### 终端与项目准备
+
+占位内容：建议在干净目录、明确分支策略下运行。
+
+### 规则与上下文
+
+占位内容：在仓库内保留清晰的 README/CONTRIBUTING/任务说明。
+
+### 验证方式
+
+占位内容：提前定义 lint、test、build 的最小验证路径。
+
+## 10 个实用技巧
+
+### 1. 善用 `/compact` 压缩上下文
+
+占位说明：长会话后先压缩，再继续实现，避免上下文漂移。
+
+```text
+/compact 请保留任务目标、已完成变更、剩余风险，继续执行下一步。
+```
+
+### 2. 在复杂任务中先进入 Plan 模式
+
+占位说明：先把任务拆成可验证步骤，再逐步落地。
+
+```text
+请先给 5 步执行计划，每步都包含“产出文件 + 验证命令”。
+```
+
+### 3. 给出明确的“完成标准”
+
+占位说明：让 Agent 以结果导向执行，不在边缘问题上过度消耗。
+
+```text
+完成标准：测试通过、接口文档更新、示例请求可跑通。
+```
+
+### 4. 自定义 Skills 复用高频流程
+
+占位说明：把常见操作做成 Skill，减少重复指令。
+
+```text
+Skill: release-checklist
+- bump version
+- run test
+- generate changelog
+```
+
+### 5. 让它先读文件再改文件
+
+占位说明：先建立上下文，再执行修改，降低误改概率。
+
+```text
+先读取 router.ts / service.ts / test.ts，再给出最小改动方案。
+```
+
+### 6. 要求“最小可行补丁”
+
+占位说明：优先小改动，便于 review 与回滚。
+
+```text
+只改必要文件，不做风格性大重构。
+```
+
+### 7. 让它同时给出风险清单
+
+占位说明：每次改动都输出潜在回归点。
+
+```text
+请列出本次改动可能引入的 3 个风险和验证方法。
+```
+
+### 8. 强制附带测试或验证命令
+
+占位说明：没有验证的改动不算完成。
+
+```text
+给出可直接运行的验证命令，并说明预期输出。
+```
+
+### 9. 使用“对比前后行为”描述需求
+
+占位说明：行为差异比“改这个文件”更不容易歧义。
+
+```text
+修改前：接口返回 500；修改后：非法参数返回 400 + 错误码。
+```
+
+### 10. 输出时固定格式便于审阅
+
+占位说明：统一成“改动摘要 / 文件列表 / 验证结果 / 后续建议”。
+
+```text
+最终回复必须包含：变更点、受影响文件、验证命令结果、剩余 TODO。
+```
+
+## 常见坑
+
+- 一次性目标过大，导致改动范围失控。
+- 没有明确验收标准，只看“看起来差不多”。
+- 忽略现有项目约束，产生风格冲突。
+
+## 相关资源
+
+- [Anthropic 文档](https://docs.anthropic.com/)
+- [Claude Code 文档](https://docs.anthropic.com/en/docs/claude-code)
+- [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
+
+<div class="repo-card-row">
+<div class="repo-card">
+<a href="https://github.com/gy-hou/publicwiki" target="_blank" rel="noopener noreferrer">
+<img class="gh-card-img" src="https://gh-card.dev/repos/gy-hou/publicwiki.svg" alt="gy-hou/publicwiki">
+</a>
+</div>
+</div>
