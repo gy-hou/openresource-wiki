@@ -72,7 +72,7 @@ hide:
 | 日期 | 内容 | 板块 |
 |------|------|------|
 | 2026-04-07 | [一个 Prompt + 工具清单，搭建 Karpathy 本地知识库](blog/posts/2026-04-07-karpathy-knowledge-base.md) | 博客 |
-| 2026-04-04 | [OpenClaw 新手到高阶全攻略](blog/posts/ope.md) | 博客 |
+| 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/posts/2026-03-18openclaw guide.md) | 博客 |
 | 2026-04-01 | [DeepSeek API 完全使用指南](blog/posts/2026-04-01-deepseek-api-guide.md) | 博客 |
 | 2026-03-25 | [Claude Code 进阶使用技巧](blog/posts/2026-03-25-claude-code-tips.md) | 博客 |
 | 2026-03-10 | [Claude Code 泄漏版：智能体长期记忆与自我进化](blog/posts/2026-03-10-prompt-engineering-101.md) | 博客 |
@@ -110,11 +110,11 @@ hide:
 
 ## 🏷️ 热门标签
 
-[:material-tag: prompt](tags.md){ .md-tag }
-[:material-tag: Claude](tags.md){ .md-tag }
-[:material-tag: 教程](tags.md){ .md-tag }
-[:material-tag: Claude Code](tags.md){ .md-tag }
-[:material-tag: skill](tags.md){ .md-tag }
-[:material-tag: 编程](tags.md){ .md-tag }
-[:material-tag: DeepSeek](tags.md){ .md-tag }
-[:material-tag: 写作](tags.md){ .md-tag }
+[prompt](tags.md){ .md-tag }
+[Claude](tags.md){ .md-tag }
+[教程](tags.md){ .md-tag }
+[Claude Code](tags.md){ .md-tag }
+[skill](tags.md){ .md-tag }
+[编程](tags.md){ .md-tag }
+[DeepSeek](tags.md){ .md-tag }
+[写作](tags.md){ .md-tag }

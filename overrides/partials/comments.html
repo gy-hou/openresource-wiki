@@ -1,4 +1,4 @@
-{% if page.meta.comments != false %}
+{% if page.meta.comments == true %}{# 默认关闭，在 frontmatter 中设 comments: true 开启 #}
 <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
 <!-- Giscus 评论系统 -->
