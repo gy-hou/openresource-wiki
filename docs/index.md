@@ -60,14 +60,19 @@ hide:
 
 | 日期 | 内容 | 标签 |
 |------|------|------|
-| 2026-04-07 | [搭建 Karpathy 本地知识库](blog/posts/2026-04-07-karpathy-knowledge-base.md) | `知识库` `Claude Code` `Obsidian` |
-| 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/posts/2026-03-18openclaw guide.md) | `OpenClaw` `工作流` |
-| 2026-04-01 | [DeepSeek API 使用指南](blog/posts/2026-04-01-deepseek-api-guide.md) | `DeepSeek` `API` `教程` |
-| 2026-03-25 | [Claude Code 进阶技巧](blog/posts/2026-03-25-claude-code-tips.md) | `Claude Code` `效率` |
-| 2026-03-10 | [Claude Code 泄漏版解析](blog/posts/2026-03-10-prompt-engineering-101.md) | `Claude Code` `长期记忆` |
+| 2026-04-07 | [搭建 Karpathy 本地知识库](blog/karpathy-knowledge-base/) | `知识库` `Claude Code` |
+| 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/openclaw-advanced/) | `OpenClaw` `工作流` |
+| 2026-04-01 | [DeepSeek API 使用指南](blog/deepseek-api-完全使用指南/) | `DeepSeek` `API` |
+| 2026-03-25 | [Claude Code 进阶技巧](blog/claude-code-进阶使用技巧/) | `Claude Code` `效率` |
+| 2026-03-10 | [Claude Code 泄漏版解析](blog/claude-code-memory-analysis/) | `Claude Code` `长期记忆` |
 
-!!! info "为什么做这个 Wiki"
-    小红书有字数限制，图片里的代码和 Prompt 没法复制。这里把干货结构化、开源出来，看完就能复制使用。
+## 📬 Newsletter
+
+<div style="border:1px solid var(--wiki-card-border);border-radius:12px;padding:1.2rem 1.5rem;background:var(--wiki-card-bg);max-width:480px;">
+<p style="margin:0 0 0.5rem;font-weight:600;">订阅更新</p>
+<p style="margin:0 0 0.8rem;font-size:0.8rem;color:var(--wiki-muted);">每周一封，不水不卷。新文章、新工具、新想法，直接送到你邮箱。</p>
+<a href="https://github.com/gy-hou/publicwiki/issues/new?title=Subscribe&body=我想订阅更新" target="_blank" style="display:inline-block;padding:0.45rem 1.2rem;border-radius:8px;background:var(--wiki-accent);color:white;text-decoration:none;font-size:0.82rem;font-weight:600;">订阅（GitHub Issue）</a>
+</div>
 
 [prompt](tags.md){ .md-tag }
 [Claude](tags.md){ .md-tag }

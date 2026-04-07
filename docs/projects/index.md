@@ -3,18 +3,18 @@ hide:
   - toc
 ---
 
-我的开源项目展示，点击查看详情。
+做东西比想东西难，但做出来的那一刻值得。
 
 <div class="card-grid">
 
-<a class="card" href="../blog/posts/2026-04-07-karpathy-knowledge-base/">
+<a class="card" href="../blog/karpathy-knowledge-base/">
   <div class="card-icon">📊</div>
   <div class="card-title">TrendR</div>
   <div class="card-desc">AI 驱动的自动化文献综述工具，追踪研究领域趋势</div>
   <div class="card-meta">Python · 🟡 开发中</div>
 </a>
 
-<a class="card" href="../blog/posts/2026-03-18openclaw%20guide/">
+<a class="card" href="../blog/openclaw-advanced/">
   <div class="card-icon">🐾</div>
   <div class="card-title">OpenClaw</div>
   <div class="card-desc">开源 AI 工具集，多 Agent 编排 + 可复用工作流模块</div>
@@ -36,6 +36,3 @@ hide:
 </a>
 
 </div>
-
-!!! info "想了解更多？"
-    每个项目的详细文档正在撰写中，敬请期待。

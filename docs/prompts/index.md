@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-精心调试的 Prompt 模板，直接复制使用。带 ⭐ 为自研。
+好的 Prompt 不是咒语，是你把思路讲清楚的过程。带 ⭐ 为自研。
 
 <div class="card-grid">
 
