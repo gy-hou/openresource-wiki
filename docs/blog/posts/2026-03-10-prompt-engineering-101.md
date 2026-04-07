@@ -4,11 +4,11 @@ authors:
   - gy-hou
 categories:
   - AI 工具
+slug: claude-code-memory-analysis
 tags:
   - Claude Code
   - AI Agent
   - 长期记忆
-slug: claude-code-memory-analysis
 ---
 
 # Claude Code 泄漏版：智能体长期记忆与自我进化解析

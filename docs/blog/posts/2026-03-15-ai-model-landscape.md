@@ -5,10 +5,8 @@ authors:
 categories:
   - 热点解读
 tags:
-  - AI模型
   - Claude
   - GPT
-  - Gemini
   - DeepSeek
 ---
 

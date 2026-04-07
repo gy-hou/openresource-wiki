@@ -4,13 +4,11 @@ authors:
   - gy-hou
 categories:
   - AI 工具
-tags:
-  - 知识库
-  - Claude Code
-  - Obsidian
-  - 效率
-  - 教程
 slug: karpathy-knowledge-base
+tags:
+  - Claude Code
+  - 知识库
+  - 工具
 ---
 
 # 一个 Prompt + 工具清单，搭建 Karpathy 本地知识库

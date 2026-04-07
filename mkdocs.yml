@@ -157,12 +157,15 @@ nav:
     - 编程:
       - prompts/coding/index.md
       - 代码审查 Prompt: prompts/coding/code-review-prompt.md
+      - Claude Code 工程化工作流: prompts/coding/claude-code-workflow.md
     - 写作:
       - prompts/writing/index.md
       - 小红书爆款帖子写作 Prompt: prompts/writing/xiaohongshu-writer.md
+      - 技术博客写作 Prompt: prompts/writing/tech-blog-writer.md
     - 研究:
       - prompts/research/index.md
       - 论文精读 Prompt: prompts/research/paper-reader.md
+      - LLM 知识库管理 Prompt: prompts/research/knowledge-base-manager.md
     - System Prompts:
       - prompts/system/index.md
       - 通用 AI 助手 System Prompt 模板: prompts/system/ai-assistant-system.md
@@ -172,6 +175,7 @@ nav:
       - skills/templates/index.md
       - 小红书知识卡片生成器: skills/templates/xhs-card-generator.md
       - LLM Wiki 知识库管理 Agent: skills/templates/llm-wiki-agent.md
+      - 博客标签自动提取: skills/templates/auto-tag-extractor.md
   - 工具箱:
     - toolbox/index.md
     - AI 平台:

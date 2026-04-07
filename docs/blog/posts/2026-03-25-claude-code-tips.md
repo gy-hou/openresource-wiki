@@ -5,8 +5,8 @@ authors:
 categories:
   - AI 工具
 tags:
-  - Claude
   - Claude Code
+  - 教程
   - 效率
 ---
 

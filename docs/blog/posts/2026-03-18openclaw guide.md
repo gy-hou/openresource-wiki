@@ -4,12 +4,11 @@ authors:
   - gy-hou
 categories:
   - AI 工具
+slug: openclaw-advanced
 tags:
   - OpenClaw
-  - AI Agent
+  - 教程
   - 工作流
-  - 效率
-slug: openclaw-advanced
 ---
 
 # OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流
