@@ -4,7 +4,7 @@
  */
 (function () {
   // ← 部署 Worker 后替换这个 URL
-  var WORKER_URL = "https://wiki-ai-chat.YOUR_CF_SUBDOMAIN.workers.dev";
+  var WORKER_URL = "https://wiki-ai-chat.hougarry.workers.dev";
 
   var messages = [];
   var isOpen = false;
