@@ -14,8 +14,6 @@ hide:
 
 🎓 USTC · 🤖 专注 AI 工具测评 / 前沿模型解读 / Fintech · 📩 学术间歇性输出，专注科研半挂
 
-{{ card_row(github_stats("gy-hou"), xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6283)) }}
-
 ## 板块导航
 
 <div class="card-grid">
@@ -60,21 +58,16 @@ hide:
 
 ## 最近更新
 
-| 日期 | 内容 | 板块 |
+| 日期 | 内容 | 标签 |
 |------|------|------|
-| 2026-04-07 | [一个 Prompt + 工具清单，搭建 Karpathy 本地知识库](blog/posts/2026-04-07-karpathy-knowledge-base.md) | 博客 |
-| 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/posts/2026-03-18openclaw guide.md) | 博客 |
-| 2026-04-01 | [DeepSeek API 完全使用指南](blog/posts/2026-04-01-deepseek-api-guide.md) | 博客 |
-| 2026-03-25 | [Claude Code 进阶使用技巧](blog/posts/2026-03-25-claude-code-tips.md) | 博客 |
-| 2026-03-10 | [Claude Code 泄漏版：记忆系统与自我进化](blog/posts/2026-03-10-prompt-engineering-101.md) | 博客 |
+| 2026-04-07 | [搭建 Karpathy 本地知识库](blog/posts/2026-04-07-karpathy-knowledge-base.md) | `知识库` `Claude Code` `Obsidian` |
+| 2026-03-18 | [OpenClaw 新手到高阶全攻略](blog/posts/2026-03-18openclaw guide.md) | `OpenClaw` `工作流` |
+| 2026-04-01 | [DeepSeek API 使用指南](blog/posts/2026-04-01-deepseek-api-guide.md) | `DeepSeek` `API` `教程` |
+| 2026-03-25 | [Claude Code 进阶技巧](blog/posts/2026-03-25-claude-code-tips.md) | `Claude Code` `效率` |
+| 2026-03-10 | [Claude Code 泄漏版解析](blog/posts/2026-03-10-prompt-engineering-101.md) | `Claude Code` `长期记忆` |
 
 !!! info "为什么做这个 Wiki"
-    - 小红书有字数限制，很多干货只能做成图片
-    - 图片里的代码和 Prompt 没法复制，读者体验会被打断
-    - 很多想分享的知识 / 技术太敏感
-    - 这里的内容都尽量做到"看完就能复制使用"
-
-## 🏷️ 热门标签
+    小红书有字数限制，图片里的代码和 Prompt 没法复制。这里把干货结构化、开源出来，看完就能复制使用。
 
 [prompt](tags.md){ .md-tag }
 [Claude](tags.md){ .md-tag }
@@ -87,7 +80,10 @@ hide:
 
 ---
 
-<p style="text-align:center;font-size:0.75rem;opacity:0.6;">
-RSS 订阅：<a href="https://gy-hou.github.io/publicwiki/feed_rss_created.xml">feed_rss_created.xml</a>
+{{ xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6283, url="https://xhslink.com/m/3lRU7a53RSt") }}
+
+<p style="text-align:center;font-size:0.72rem;opacity:0.5;margin-top:0.5rem;">
+<a href="https://gy-hou.github.io/publicwiki/feed_rss_created.xml">RSS</a>
+· <a href="https://github.com/gy-hou/publicwiki">GitHub</a>
 · <a href="https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md">贡献内容</a>
 </p>

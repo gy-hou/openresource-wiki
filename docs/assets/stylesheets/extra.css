@@ -577,6 +577,29 @@ a:hover .xhs-card {
   height: 18px;
 }
 
+/* ═══════════════════════════════════════
+   Blog — compact post listing
+   ═══════════════════════════════════════ */
+
+.md-typeset .md-post {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.md-typeset .md-post__header {
+  margin-bottom: 0.25rem;
+}
+
+.md-typeset .md-post .md-post__content > p {
+  margin-bottom: 0.4rem;
+  font-size: 0.82rem;
+}
+
+/* Tags in blog listing */
+.md-typeset .md-post .md-tags {
+  margin-top: 0.3rem;
+}
+
 *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
