@@ -18,7 +18,7 @@
         <link rel="prev" href="../claude-code-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
       
       
-        <link rel="next" href="../openclaw-advanced/">
+        <link rel="next" href="../karpathy-knowledge-base/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
@@ -2295,62 +2295,6 @@
 
 
 
-<h2 id="__comments">评论</h2>
-
-<!-- Giscus 评论系统 -->
-<!-- 使用前需要：
-     1. 在 GitHub 仓库 Settings → Features 中开启 Discussions
-     2. 安装 Giscus App: https://github.com/apps/giscus
-     3. 去 https://giscus.app/ 填入仓库信息，获取 data-repo-id 和 data-category-id
-     4. 将下方占位值替换为真实值
--->
-<script
-  src="https://giscus.app/client.js"
-  data-repo="gy-hou/publicwiki"
-  data-repo-id="TODO_REPO_ID"
-  data-category="Announcements"
-  data-category-id="TODO_CATEGORY_ID"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="preferred_color_scheme"
-  data-lang="zh-CN"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  async>
-</script>
-
-<!-- 跟随 MkDocs Material 主题切换 -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]")
-
-  var defined = function () {
-    return document.querySelector("[data-md-color-scheme]")
-  }
-
-  var observer = new MutationObserver(function() {
-    var scheme = document.body.getAttribute("data-md-color-scheme")
-    var theme = scheme === "slate" ? "dark" : "light"
-
-    var frame = document.querySelector(".giscus-frame")
-    if (frame) {
-      frame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: theme } } },
-        "https://giscus.app"
-      )
-    }
-  })
-
-  if (defined()) {
-    observer.observe(defined(), {
-      attributes: true,
-      attributeFilter: ["data-md-color-scheme"]
-    })
-  }
-</script>
-
       
     </article>
   </div>
@@ -2395,13 +2339,13 @@
         
         
           
-          <a href="../openclaw-advanced/" class="md-footer__link md-footer__link--next" aria-label="下一页: OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流">
+          <a href="../karpathy-knowledge-base/" class="md-footer__link md-footer__link--next" aria-label="下一页: 一个 Prompt + 工具清单，搭建 Karpathy 本地知识库">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流
+                一个 Prompt + 工具清单，搭建 Karpathy 本地知识库
               </div>
             </div>
             <div class="md-footer__button md-icon">
