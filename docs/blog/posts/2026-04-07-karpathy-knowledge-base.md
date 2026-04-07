@@ -19,32 +19,7 @@ slug: karpathy-knowledge-base
 
 <!-- more -->
 
-<div class="repo-card-row">
-<div class="repo-card">
-<a href="https://www.xiaohongshu.com/discovery/item/69d27fe6000000002103823e" target="_blank" rel="noopener noreferrer">
-<div class="xhs-note-card">
-  <div class="xhs-note-header">
-    <span class="xhs-badge">
-      <svg class="xhs-badge-icon" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="18" rx="4" fill="#FF2442"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="7" font-weight="bold" fill="white">书</text></svg>
-      小红书
-    </span>
-    <span class="xhs-note-title">一个命令和工具清单实现Karpathy本地知识库</span>
-  </div>
-  <p class="xhs-note-desc">把工具清单和 Prompt 直接复制发给你的 Claude Code / Codex 就能开搭</p>
-  <div class="xhs-note-stats">
-    <span class="xhs-stat">
-      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-      294
-    </span>
-    <span class="xhs-stat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-7-3.5L5 21V5z"/></svg>
-      650
-    </span>
-  </div>
-</div>
-</a>
-</div>
-</div>
+{{ card_row(xhs_note("一个命令和工具清单实现Karpathy本地知识库", "https://www.xiaohongshu.com/discovery/item/69d27fe6000000002103823e", 294, 650, "把工具清单和 Prompt 直接复制发给你的 Claude Code / Codex 就能开搭")) }}
 
 ---
 

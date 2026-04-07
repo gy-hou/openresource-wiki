@@ -87,26 +87,7 @@ hide:
 - RSS 订阅：[:material-rss: feed_rss_created.xml](https://gy-hou.github.io/publicwiki/feed_rss_created.xml)
 - 贡献内容：[查看 CONTRIBUTING.md](https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md)
 
-<div class="repo-card">
-<a href="https://www.xiaohongshu.com/user/profile/5206954911" target="_blank" rel="noopener noreferrer">
-<div class="xhs-card">
-  <div class="xhs-card-inner">
-    <div class="xhs-logo-area">
-      <svg class="xhs-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="10" fill="#FF2442"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold" fill="white">小红书</text></svg>
-    </div>
-    <div class="xhs-info">
-      <div class="xhs-platform">小红书</div>
-      <div class="xhs-username">@Lucas｜AI X Fintech</div>
-      <div class="xhs-desc">961 粉丝 · 6219 获赞与收藏</div>
-    </div>
-    <div class="xhs-arrow">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </div>
-  </div>
-</div>
-</a>
-</div>
-</div>
+{{ card_row(github_stats("gy-hou"), xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6219)) }}
 
 ## 🏷️ 热门标签
 

@@ -133,10 +133,4 @@ Skill: release-checklist
 - [Claude Code 文档](https://docs.anthropic.com/en/docs/claude-code)
 - [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
 
-<div class="repo-card-row">
-<div class="repo-card">
-<a href="https://github.com/gy-hou/publicwiki" target="_blank" rel="noopener noreferrer">
-<img class="gh-card-img" src="https://gh-card.dev/repos/gy-hou/publicwiki.svg" alt="gy-hou/publicwiki">
-</a>
-</div>
-</div>
+{{ card_row(github_repo("gy-hou/publicwiki")) }}

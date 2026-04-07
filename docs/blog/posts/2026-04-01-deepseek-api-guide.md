@@ -41,13 +41,7 @@ DeepSeek 是目前性价比最高的国产大模型 API 之一。本文手把手
 
 ## 搭配 Chatbox 使用
 
-<div class="repo-card-row">
-<div class="repo-card">
-<a href="https://github.com/Bin-Huang/chatbox" target="_blank" rel="noopener noreferrer">
-<img class="gh-card-img" src="https://gh-card.dev/repos/Bin-Huang/chatbox.svg" alt="Bin-Huang/chatbox">
-</a>
-</div>
-</div>
+{{ card_row(github_repo("Bin-Huang/chatbox")) }}
 
 ```json
 {

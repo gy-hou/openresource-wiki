@@ -21,32 +21,7 @@ slug: claude-code-memory-analysis
 
 这里只集中一点：分析泄漏版 Claude Code 对**长期记忆**的处理。
 
-<div class="repo-card-row">
-<div class="repo-card">
-<a href="https://www.xiaohongshu.com/discovery/item/69d07c12000000001a033ad4" target="_blank" rel="noopener noreferrer">
-<div class="xhs-note-card">
-  <div class="xhs-note-header">
-    <span class="xhs-badge">
-      <svg class="xhs-badge-icon" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="18" rx="4" fill="#FF2442"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="7" font-weight="bold" fill="white">书</text></svg>
-      小红书
-    </span>
-    <span class="xhs-note-title">claude code源码解析：记忆系统和自我进化</span>
-  </div>
-  <p class="xhs-note-desc">Claude Code 的自动化不是单 agent 自己变聪明，而是把 agent 变成一个可以被调度、分工、后台运行的运行系统。</p>
-  <div class="xhs-note-stats">
-    <span class="xhs-stat">
-      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-      37
-    </span>
-    <span class="xhs-stat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-7-3.5L5 21V5z"/></svg>
-      —
-    </span>
-  </div>
-</div>
-</a>
-</div>
-</div>
+{{ card_row(xhs_note("claude code源码解析：记忆系统和自我进化", "https://www.xiaohongshu.com/discovery/item/69d07c12000000001a033ad4", 37, 0, "Claude Code 的自动化不是单 agent 自己变聪明，而是把 agent 变成一个可以被调度、分工、后台运行的运行系统。")) }}
 
 ---
 
