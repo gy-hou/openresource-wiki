@@ -83,18 +83,9 @@ hide:
 ## 统计与链接
 
 - 内容统计：`5` 篇博客 / `4` 个 Prompts / `2` 个 Skills
-- GitHub Star：
-  [![GitHub Repo stars](https://img.shields.io/github/stars/gy-hou/publicwiki?style=for-the-badge&logo=github)](https://github.com/gy-hou/publicwiki)
 - RSS 订阅：[:material-rss: feed_rss_created.xml](https://gy-hou.github.io/publicwiki/feed_rss_created.xml)
 - 贡献内容：[查看 CONTRIBUTING.md](https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md)
 
-<div class="repo-card-row">
-<div class="repo-card">
-<a href="https://github.com/gy-hou" target="_blank" rel="noopener noreferrer">
-<img class="gh-card-img gh-stats-light" src="https://github-readme-stats-ten-mu-29.vercel.app/api/?username=gy-hou&theme=default&show_icons=true" alt="gy-hou GitHub stats">
-<img class="gh-card-img gh-stats-dark" src="https://github-readme-stats-ten-mu-29.vercel.app/api/?username=gy-hou&theme=dark&show_icons=true" alt="gy-hou GitHub stats">
-</a>
-</div>
 <div class="repo-card">
 <a href="https://www.xiaohongshu.com/user/profile/5206954911" target="_blank" rel="noopener noreferrer">
 <div class="xhs-card">
