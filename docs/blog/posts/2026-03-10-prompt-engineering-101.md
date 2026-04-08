@@ -133,3 +133,5 @@ Claude Code 泄漏版最值得学的，不是某个单独工具，而是：**自
 | control plane | 权限 / 策略 / 远程管控 |
 
 两者一结合，就不是普通 REPL 了，而是：**一个能持续运行、逐步积累工作上下文的 agent runtime**。
+
+{{ blog_cover("claude-code-memory-analysis") }}

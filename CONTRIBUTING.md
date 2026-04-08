@@ -54,4 +54,4 @@
 
 ## 问题反馈
 
-发现 bug 或有内容建议？请提 [Issue](https://github.com/gy-hou/publicwiki/issues)。
+发现 bug 或有内容建议？请提 [Issue](https://github.com/gy-hou/openresource-wiki/issues)。

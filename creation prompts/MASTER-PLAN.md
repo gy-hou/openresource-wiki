@@ -8,8 +8,8 @@
 |--------|------|
 | 技术栈 | MkDocs + Material for MkDocs |
 | 部署方式 | GitHub Pages (子路径) |
-| 访问地址 | `https://gy-hou.github.io/publicwiki/` |
-| GitHub 仓库名 | `publicwiki`（仓库名决定子路径，需要在 GitHub 上创建为 `publicwiki`）|
+| 访问地址 | `https://gy-hou.github.io/openresource-wiki/` |
+| GitHub 仓库名 | `openresource-wiki`（仓库名决定子路径，需要在 GitHub 上创建为 `openresource-wiki`）|
 | Blog 管理 | 使用 Material 内置 blog plugin（自动分页、RSS、归档）|
 | 多语言 | 暂不支持，后续再加 |
 | 内容策略 | 全部先用模板占位，后续替换真实内容 |
@@ -20,7 +20,7 @@
 
 ```
 gy-hou.github.io (学术主站)
-└── /publicwiki/  ← 本项目，独立仓库 "publicwiki"
+└── /openresource-wiki/  ← 本项目，独立仓库 "openresource-wiki"
     ├── /             首页
     ├── /blog/        博客帖子（Material blog plugin 管理）
     ├── /prompts/     Prompt 库
@@ -35,7 +35,7 @@ gy-hou.github.io (学术主站)
 ## 与原方案的关键变化
 
 1. **posts → blog**：用 Material blog plugin 替代手动 posts 目录，获得自动分页 / RSS / 归档 / 摘要
-2. **sub-path 部署**：`site_url` 设为 `https://gy-hou.github.io/publicwiki/`，`use_directory_urls: true`
+2. **sub-path 部署**：`site_url` 设为 `https://gy-hou.github.io/openresource-wiki/`，`use_directory_urls: true`
 3. **去掉 i18n**：减少首次交付复杂度
 4. **增加 Makefile**：本地开发命令统一入口
 5. **CI 增强**：除部署外增加 markdown lint + link check
@@ -62,7 +62,7 @@ Phase 0 (骨架) → Phase 1 (设计) → Phase 2 (内容) → Phase 3 (功能) 
 
 ## Codex 完成后你需要手动做的事
 
-1. 在 GitHub 上创建仓库名为 `publicwiki`
+1. 在 GitHub 上创建仓库名为 `openresource-wiki`
 2. 填写 `mkdocs.yml` 中的 `repo_url`
 3. 去 https://giscus.app/ 获取 Giscus 配置值并填入
 4. 替换 favicon、logo、og 图片

@@ -99,14 +99,36 @@ def define_env(env):
 
     @env.macro
     def featured(items):
-        """Featured carousel. items = list of (title, url, color)."""
-        colors = ["blue", "green", "purple", "orange", "teal"]
+        """Featured carousel. items = list of (title, url, cover_slug).
+        cover_slug maps to assets/images/blog/covers/{slug}.jpg"""
         cards = []
+        fallback_colors = ["blue", "green", "purple", "orange", "teal"]
         for i, item in enumerate(items):
             title, url = item[0], item[1]
-            color = item[2] if len(item) > 2 else colors[i % len(colors)]
-            cards.append(
-                f'<a class="featured-card featured-card--{color}" href="{url}">'
-                f'<div class="featured-card-title">{title}</div></a>'
-            )
+            slug = item[2] if len(item) > 2 else None
+            # Try cover image first, fall back to gradient
+            if slug and not slug in ("blue", "green", "purple", "orange", "teal"):
+                style = (
+                    f'background-image: url(\"assets/images/blog/covers/{slug}.jpg\");'
+                    f'background-size: cover; background-position: center;'
+                )
+                cards.append(
+                    f'<a class="featured-card" style=\'{style}\' href="{url}">'
+                    f'<div class="featured-card-title">{title}</div></a>'
+                )
+            else:
+                color = slug if slug in ("blue", "green", "purple", "orange", "teal") else fallback_colors[i % 5]
+                cards.append(
+                    f'<a class="featured-card featured-card--{color}" href="{url}">'
+                    f'<div class="featured-card-title">{title}</div></a>'
+                )
         return '<div class="featured-carousel">\n' + "\n".join(cards) + "\n</div>"
+
+    @env.macro
+    def blog_cover(slug):
+        """Blog post cover image, shown at bottom of post."""
+        return (
+            f'<div class="blog-cover">'
+            f'<img src="/assets/images/blog/covers/{slug}.jpg" alt="cover" loading="lazy">'
+            f'</div>'
+        )

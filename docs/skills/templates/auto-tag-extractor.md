@@ -54,4 +54,4 @@ AI Agent, API, Obsidian, prompt, skill,
 
 ## 源码
 
-[`scripts/auto_tags.py`](https://github.com/gy-hou/publicwiki/blob/main/scripts/auto_tags.py)
+[`scripts/auto_tags.py`](https://github.com/gy-hou/openresource-wiki/blob/main/scripts/auto_tags.py)

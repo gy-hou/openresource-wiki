@@ -36,8 +36,8 @@ hide:
 
 ## 💬 反馈
 
-- 内容建议 → [提 Issue](https://github.com/gy-hou/publicwiki/issues)
-- 投稿 → [贡献指南](https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md)
+- 内容建议 → [提 Issue](https://github.com/gy-hou/openresource-wiki/issues)
+- 投稿 → [贡献指南](https://github.com/gy-hou/openresource-wiki/blob/main/CONTRIBUTING.md)
 
 ## 💬 评论
 

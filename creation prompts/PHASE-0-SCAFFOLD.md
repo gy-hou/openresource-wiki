@@ -14,8 +14,8 @@
 MkDocs + Material for MkDocs + Material Blog Plugin + GitHub Pages
 
 ## 关键约束
-- 部署地址：https://gy-hou.github.io/publicwiki/
-- 仓库名：publicwiki
+- 部署地址：https://gy-hou.github.io/openresource-wiki/
+- 仓库名：openresource-wiki
 - 语言：中文（zh）
 - 不需要 i18n 插件
 
@@ -23,11 +23,11 @@ MkDocs + Material for MkDocs + Material Blog Plugin + GitHub Pages
 
 ```yaml
 site_name: "AI Wiki"
-site_url: https://gy-hou.github.io/publicwiki/
+site_url: https://gy-hou.github.io/openresource-wiki/
 site_author: gy-hou
 site_description: "AI 工具、Prompts、Skills 开源分享 | 小红书同名博主"
-repo_name: gy-hou/publicwiki
-repo_url: https://github.com/gy-hou/publicwiki
+repo_name: gy-hou/openresource-wiki
+repo_url: https://github.com/gy-hou/openresource-wiki
 edit_uri: edit/main/docs/
 use_directory_urls: true
 
@@ -308,7 +308,7 @@ build/
 
 AI 工具、Prompts、Skills 开源分享站。
 
-**在线访问**：https://gy-hou.github.io/publicwiki/
+**在线访问**：https://gy-hou.github.io/openresource-wiki/
 
 ## 本地开发
 

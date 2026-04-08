@@ -1,12 +1,12 @@
 # AI Wiki
 
-[![Deploy](https://github.com/gy-hou/publicwiki/actions/workflows/deploy.yml/badge.svg)](https://github.com/gy-hou/publicwiki/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/gy-hou/openresource-wiki/actions/workflows/deploy.yml/badge.svg)](https://github.com/gy-hou/openresource-wiki/actions/workflows/deploy.yml)
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 > AI 工具、Prompts、Skills 开源分享站
 
-🌐 **在线访问**：https://gy-hou.github.io/publicwiki/
+🌐 **在线访问**：https://gy-hou.github.io/openresource-wiki/
 
 ## 这是什么
 

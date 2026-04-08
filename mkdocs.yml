@@ -1,9 +1,9 @@
 site_name: "AI Wiki"
-site_url: https://gy-hou.github.io/publicwiki/
+site_url: https://gy-hou.github.io/openresource-wiki/
 site_author: gy-hou
 site_description: "AI 工具、Prompts、Skills 开源分享 | 小红书同名博主"
-repo_name: gy-hou/publicwiki
-repo_url: https://github.com/gy-hou/publicwiki
+repo_name: gy-hou/openresource-wiki
+repo_url: https://github.com/gy-hou/openresource-wiki
 edit_uri: edit/main/docs/
 use_directory_urls: true
 
@@ -116,7 +116,7 @@ plugins:
       categories:
         - categories
         - tags
-      image: https://gy-hou.github.io/publicwiki/assets/images/og-default.png
+      image: https://gy-hou.github.io/openresource-wiki/assets/images/og-default.png
   - git-revision-date-localized:
       enable_creation_date: true
       enable_git_follow: false

@@ -51,7 +51,7 @@ hide:
 
 - 使用顶部搜索栏查找内容
 - 浏览 [标签索引](tags.md) 找到感兴趣的主题
-- 去 [GitHub Issues](https://github.com/gy-hou/publicwiki/issues) 告诉我们
+- 去 [GitHub Issues](https://github.com/gy-hou/openresource-wiki/issues) 告诉我们
 ```
 
 ## 2. 创建 `LICENSE`
@@ -109,13 +109,13 @@ unless otherwise noted.
 ```markdown
 # AI Wiki
 
-[![Deploy](https://github.com/gy-hou/publicwiki/actions/workflows/deploy.yml/badge.svg)](https://github.com/gy-hou/publicwiki/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/gy-hou/openresource-wiki/actions/workflows/deploy.yml/badge.svg)](https://github.com/gy-hou/openresource-wiki/actions/workflows/deploy.yml)
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 > AI 工具、Prompts、Skills 开源分享站
 
-🌐 **在线访问**：https://gy-hou.github.io/publicwiki/
+🌐 **在线访问**：https://gy-hou.github.io/openresource-wiki/
 
 ## 这是什么
 
@@ -153,7 +153,7 @@ make help
 代码部分采用 MIT 协议。
 ```
 
-确保所有 badge 链接正确（仓库名为 `gy-hou/publicwiki`）。
+确保所有 badge 链接正确（仓库名为 `gy-hou/openresource-wiki`）。
 ```
 
 ---
@@ -171,7 +171,7 @@ make help
 - [ ] 没有重复的 nav 条目
 - [ ] plugins 配置正确（blog, tags, search, git-revision-date-localized, rss）
 - [ ] theme 配置完整
-- [ ] site_url 设置为 https://gy-hou.github.io/publicwiki/
+- [ ] site_url 设置为 https://gy-hou.github.io/openresource-wiki/
 
 ### 2. 文件完整性
 确保以下文件都存在且非空：

@@ -483,7 +483,7 @@ tags:
 
 ## 问题反馈
 
-发现 bug 或有内容建议？请提 [Issue](https://github.com/gy-hou/publicwiki/issues)。
+发现 bug 或有内容建议？请提 [Issue](https://github.com/gy-hou/openresource-wiki/issues)。
 ```
 
 确保所有模板中的代码块都能被 MkDocs 正确渲染（注意嵌套代码块的转义）。

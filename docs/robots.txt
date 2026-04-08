@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://gy-hou.github.io/publicwiki/sitemap.xml
+Sitemap: https://gy-hou.github.io/openresource-wiki/sitemap.xml

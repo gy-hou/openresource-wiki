@@ -44,4 +44,4 @@ tags:
 
 *最后更新：2026-04-07*
 
-*有建议？欢迎在 [Issues](https://github.com/gy-hou/publicwiki/issues) 中提出。*
+*有建议？欢迎在 [Issues](https://github.com/gy-hou/openresource-wiki/issues) 中提出。*

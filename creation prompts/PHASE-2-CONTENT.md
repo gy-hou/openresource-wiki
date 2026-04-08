@@ -466,7 +466,7 @@ hide:
 <div class="card-title">AI Wiki</div>
 <div class="card-desc">就是本站！AI 工具和 Prompt 的开源分享</div>
 <br>
-🟢 活跃 · MkDocs · [GitHub](https://github.com/gy-hou/publicwiki)
+🟢 活跃 · MkDocs · [GitHub](https://github.com/gy-hou/openresource-wiki)
 </div>
 
 </div>
@@ -540,8 +540,8 @@ hide:
 
 ## 💬 反馈
 
-- 内容建议 → [提 Issue](https://github.com/gy-hou/publicwiki/issues)
-- 投稿 → [贡献指南](https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md)
+- 内容建议 → [提 Issue](https://github.com/gy-hou/openresource-wiki/issues)
+- 投稿 → [贡献指南](https://github.com/gy-hou/openresource-wiki/blob/main/CONTRIBUTING.md)
 ```
 
 ### 4. `docs/about/roadmap.md`
@@ -587,7 +587,7 @@ hide:
 
 *最后更新：2026-04-07*
 
-*有建议？欢迎在 [Issues](https://github.com/gy-hou/publicwiki/issues) 中提出。*
+*有建议？欢迎在 [Issues](https://github.com/gy-hou/openresource-wiki/issues) 中提出。*
 ```
 
 ## 同时更新

@@ -1,14 +1,15 @@
 /**
- * AI Wiki Chat — Cloudflare Worker proxy for DeepSeek API
+ * AI Chat — Cloudflare Worker proxy for DeepSeek API
+ * Serves both AI Wiki and academic homepage.
  *
  * Secrets (set via `wrangler secret put`):
  *   DEEPSEEK_API_KEY
  *
  * Environment vars (in wrangler.toml):
- *   ALLOWED_ORIGIN
+ *   ALLOWED_ORIGINS
  */
 
-const SYSTEM_PROMPT = `你是 AI Wiki 的智能助手。AI Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
+const WIKI_PROMPT = `你是 AI Wiki 的智能助手。AI Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
 
 站点板块：
 - 博客：小红书热帖文字版、AI 热点解读、实操教程
@@ -32,28 +33,58 @@ const SYSTEM_PROMPT = `你是 AI Wiki 的智能助手。AI Wiki 是一个开源�
 - 不要编造不存在的文章或功能
 - 回答控制在 200 字以内`;
 
+const ACADEMIC_PROMPT = `You are the AI assistant for Lucas Hou's academic homepage (gy-hou.github.io).
+
+About Lucas:
+- Student at USTC (University of Science and Technology of China)
+- Research interests: AI, Fintech, LLM applications
+- Projects: TrendR (AI-powered literature review), OpenClaw (AI tool collection), AI Wiki (open-source knowledge sharing)
+- Active on Xiaohongshu (小红书) sharing AI tools & tutorials
+- GitHub: github.com/gy-hou
+
+What you can help with:
+- Questions about Lucas's research, projects, and publications
+- Information about the site's content (news, projects, CV, blog)
+- General academic inquiries related to AI and Fintech
+
+Rules:
+- Reply in the same language as the user's question (English or Chinese)
+- Be friendly, concise, and professional
+- Don't fabricate publications, grades, or details not on the site
+- Keep answers under 200 words
+- For detailed inquiries, suggest contacting Lucas directly`;
+
 const MAX_MESSAGES = 10;
+
+function getSystemPrompt(origin) {
+  if (origin && origin.includes("openresource-wiki")) {
+    return WIKI_PROMPT;
+  }
+  return ACADEMIC_PROMPT;
+}
 
 export default {
   async fetch(request, env) {
     // CORS preflight
     if (request.method === "OPTIONS") {
-      return new Response(null, { status: 204, headers: corsHeaders(env) });
+      return new Response(null, { status: 204, headers: corsHeaders(env, request) });
     }
 
     if (request.method !== "POST") {
-      return json({ error: "POST only" }, 405, env);
+      return json({ error: "POST only" }, 405, env, request);
     }
 
     try {
       const { messages } = await request.json();
 
       if (!Array.isArray(messages) || messages.length === 0) {
-        return json({ error: "messages required" }, 400, env);
+        return json({ error: "messages required" }, 400, env, request);
       }
 
       // Limit conversation length
       const trimmed = messages.slice(-MAX_MESSAGES);
+      const origin = request.headers.get("Origin") || "";
+      const systemPrompt = getSystemPrompt(origin);
 
       const res = await fetch("https://api.deepseek.com/chat/completions", {
         method: "POST",
@@ -63,7 +94,7 @@ export default {
         },
         body: JSON.stringify({
           model: "deepseek-chat",
-          messages: [{ role: "system", content: SYSTEM_PROMPT }, ...trimmed],
+          messages: [{ role: "system", content: systemPrompt }, ...trimmed],
           max_tokens: 512,
           temperature: 0.7,
           stream: false,
@@ -72,31 +103,34 @@ export default {
 
       if (!res.ok) {
         const text = await res.text();
-        return json({ error: "DeepSeek API error", detail: text }, 502, env);
+        return json({ error: "DeepSeek API error", detail: text }, 502, env, request);
       }
 
       const data = await res.json();
       const reply = data.choices?.[0]?.message?.content || "抱歉，暂时无法回答。";
 
-      return json({ reply }, 200, env);
+      return json({ reply }, 200, env, request);
     } catch (e) {
-      return json({ error: e.message }, 500, env);
+      return json({ error: e.message }, 500, env, request);
     }
   },
 };
 
-function corsHeaders(env) {
+function corsHeaders(env, request) {
+  const origin = request?.headers?.get("Origin") || "";
+  const allowed = (env.ALLOWED_ORIGINS || env.ALLOWED_ORIGIN || "").split(",").map(s => s.trim());
+  const match = allowed.includes(origin) ? origin : allowed[0] || "*";
   return {
-    "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN || "*",
+    "Access-Control-Allow-Origin": match,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Max-Age": "86400",
   };
 }
 
-function json(data, status, env) {
+function json(data, status, env, request) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "Content-Type": "application/json", ...corsHeaders(env) },
+    headers: { "Content-Type": "application/json", ...corsHeaders(env, request) },
   });
 }

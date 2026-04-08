@@ -1,5 +1,6 @@
 ---
 date: 2026-03-25
+slug: claude-code-进阶使用技巧
 authors:
   - gy-hou
 categories:
@@ -133,4 +134,6 @@ Skill: release-checklist
 - [Claude Code 文档](https://docs.anthropic.com/en/docs/claude-code)
 - [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)
 
-{{ card_row(github_repo("gy-hou/publicwiki")) }}
+{{ card_row(github_repo("gy-hou/openresource-wiki")) }}
+
+{{ blog_cover("claude-code-进阶使用技巧") }}

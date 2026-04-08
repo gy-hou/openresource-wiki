@@ -1,5 +1,6 @@
 ---
 date: 2026-04-01
+slug: deepseek-api-完全使用指南
 authors:
   - gy-hou
 categories:
@@ -85,3 +86,5 @@ print(response.choices[0].message.content)
 
 !!! original "原始来源"
     本文整理自小红书帖子：<!-- TODO: 填入原帖链接 -->
+
+{{ blog_cover("deepseek-api-完全使用指南") }}

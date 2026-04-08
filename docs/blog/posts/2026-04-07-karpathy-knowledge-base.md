@@ -176,3 +176,5 @@ wiki/
 - `marker-pdf`：有 PDF 需求时安装
 - `Pandoc`：对外导出多格式
 - `qmd`：wiki 内容积累到几百篇后再安，现在 `rg` 够用
+
+{{ blog_cover("karpathy-knowledge-base") }}

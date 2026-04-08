@@ -13,11 +13,11 @@ hide:
 ### Featured
 
 {{ featured([
-  ("搭建 Karpathy 本地知识库", "blog/karpathy-knowledge-base/", "blue"),
-  ("DeepSeek API 使用指南", "blog/deepseek-api-完全使用指南/", "green"),
-  ("Claude Code 进阶技巧", "blog/claude-code-进阶使用技巧/", "purple"),
-  ("OpenClaw 全攻略", "blog/openclaw-advanced/", "orange"),
-  ("Claude Code 泄漏版解析", "blog/claude-code-memory-analysis/", "teal"),
+  ("搭建 Karpathy 本地知识库", "blog/karpathy-knowledge-base/", "karpathy-knowledge-base"),
+  ("DeepSeek API 使用指南", "blog/deepseek-api-完全使用指南/", "deepseek-api-完全使用指南"),
+  ("Claude Code 进阶技巧", "blog/claude-code-进阶使用技巧/", "claude-code-进阶使用技巧"),
+  ("OpenClaw 全攻略", "blog/openclaw-advanced/", "openclaw-advanced"),
+  ("Claude Code 泄漏版解析", "blog/claude-code-memory-analysis/", "claude-code-memory-analysis"),
 ]) }}
 
 ## 关于我
@@ -101,7 +101,7 @@ hide:
 {{ xhs_profile("Lucas｜AI X Fintech", "5206954911", 961, 6283, url="https://xhslink.com/m/3lRU7a53RSt") }}
 
 <p style="text-align:center;font-size:0.72rem;opacity:0.5;margin-top:0.5rem;">
-<a href="https://gy-hou.github.io/publicwiki/feed_rss_created.xml">RSS</a>
-· <a href="https://github.com/gy-hou/publicwiki">GitHub</a>
-· <a href="https://github.com/gy-hou/publicwiki/blob/main/CONTRIBUTING.md">贡献内容</a>
+<a href="https://gy-hou.github.io/openresource-wiki/feed_rss_created.xml">RSS</a>
+· <a href="https://github.com/gy-hou/openresource-wiki">GitHub</a>
+· <a href="https://github.com/gy-hou/openresource-wiki/blob/main/CONTRIBUTING.md">贡献内容</a>
 </p>

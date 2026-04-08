@@ -3,4 +3,4 @@ main = "src/index.js"
 compatibility_date = "2024-01-01"
 
 [vars]
-ALLOWED_ORIGIN = "https://gy-hou.github.io"
+ALLOWED_ORIGINS = "https://gy-hou.github.io,https://gy-hou.github.io/openresource-wiki"

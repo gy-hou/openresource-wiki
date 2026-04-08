@@ -161,3 +161,5 @@ OpenClaw（多 agents 处理流程调用）
 这套组合不是堆工具，是按照工作流选择每一步的最优解。
 
 {{ card_row(github_repo("gy-hou/trendr")) }}
+
+{{ blog_cover("openclaw-advanced") }}

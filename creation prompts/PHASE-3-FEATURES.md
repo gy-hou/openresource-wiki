@@ -24,7 +24,7 @@
 -->
 <script
   src="https://giscus.app/client.js"
-  data-repo="gy-hou/publicwiki"
+  data-repo="gy-hou/openresource-wiki"
   data-repo-id="<!-- TODO: 在 https://giscus.app/ 获取 -->"
   data-category="Announcements"
   data-category-id="<!-- TODO: 在 https://giscus.app/ 获取 -->"
@@ -236,7 +236,7 @@ MkDocs 默认生成 sitemap.xml，确保在 mkdocs.yml 中没有禁用它。
 ```
 User-agent: *
 Allow: /
-Sitemap: https://gy-hou.github.io/publicwiki/sitemap.xml
+Sitemap: https://gy-hou.github.io/openresource-wiki/sitemap.xml
 ```
 
 ## 5. 更新 mkdocs.yml
@@ -286,7 +286,7 @@ plugins:
       categories:
         - categories
         - tags
-      image: https://gy-hou.github.io/publicwiki/assets/images/og-default.png
+      image: https://gy-hou.github.io/openresource-wiki/assets/images/og-default.png
 ```
 
 注意：RSS plugin 要放在 blog plugin 之后。

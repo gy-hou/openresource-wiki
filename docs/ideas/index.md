@@ -247,4 +247,4 @@ hide:
 
         把分散在小红书、聊天记录、笔记里的内容结构化，开源出来。如果一年后回看这个项目有持续更新，说明这个模式 work。
 
-*有想讨论的 idea？欢迎提 [Issue](https://github.com/gy-hou/publicwiki/issues)。*
+*有想讨论的 idea？欢迎提 [Issue](https://github.com/gy-hou/openresource-wiki/issues)。*

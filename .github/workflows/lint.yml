@@ -80,8 +80,8 @@ jobs:
                   with open(filepath, encoding='utf-8') as fh:
                       content = fh.read()
                   # 检查内部 href
-                  for match in re.finditer(r'href=\"(/publicwiki/[^\"#]+)\"', content):
-                      link = match.group(1).replace('/publicwiki/', '')
+                  for match in re.finditer(r'href=\"(/openresource-wiki/[^\"#]+)\"', content):
+                      link = match.group(1).replace('/openresource-wiki/', '')
                       target = os.path.join(site_dir, link)
                       if not os.path.exists(target) and not os.path.exists(target + '/index.html'):
                           broken.append(f'{filepath}: {match.group(1)}')
