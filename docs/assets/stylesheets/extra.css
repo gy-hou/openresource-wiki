@@ -303,13 +303,13 @@ body {
 }
 
 .md-header__inner {
-  height: 2.8rem;
+  height: 3.2rem;
   min-height: 0;
 }
 
 /* Pull tabs UP into the header space */
 .md-tabs {
-  margin-top: -2.8rem;
+  margin-top: -3.2rem;
   z-index: 4;
   top: 0 !important;
   background: transparent !important;
@@ -320,10 +320,25 @@ body {
   pointer-events: auto;
 }
 
-/* Indent tabs past logo, leave room for search on right */
+/* Center tabs in the bar, clear logo + palette on left, search on right */
 .md-tabs .md-grid {
-  padding-left: 2.8rem;
+  padding-left: 6rem;
   margin-right: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Bolder, larger tab links */
+.md-tabs__link {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
 }
 
 /* Softer search box */
@@ -342,7 +357,7 @@ body {
 }
 
 /* Hide all page H1 — navigation already indicates the section */
-.md-content > .md-typeset > h1:first-child {
+.md-content > .md-typeset > h1:first-of-type {
   display: none !important;
 }
 
