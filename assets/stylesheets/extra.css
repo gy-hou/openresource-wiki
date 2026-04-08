@@ -166,10 +166,34 @@ body {
   font-weight: 600;
 }
 
+.md-typeset .md-tag.md-tag--primary {
+  border-color: rgba(2, 132, 199, 0.4);
+  background: rgba(2, 132, 199, 0.14);
+  color: #075985;
+}
+
+.md-typeset .md-tag.md-tag--accent {
+  border-color: rgba(234, 88, 12, 0.45);
+  background: rgba(234, 88, 12, 0.14);
+  color: #9a3412;
+}
+
 [data-md-color-scheme="slate"] .md-typeset .md-tag {
   border-color: rgba(121, 134, 203, 0.32);
   background: rgba(121, 134, 203, 0.18);
   color: #c5cae9;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-tag.md-tag--primary {
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(14, 116, 144, 0.35);
+  color: #bae6fd;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-tag.md-tag--accent {
+  border-color: rgba(253, 186, 116, 0.5);
+  background: rgba(194, 65, 12, 0.35);
+  color: #fed7aa;
 }
 
 .md-typeset .md-tags {
@@ -177,6 +201,16 @@ body {
   flex-wrap: wrap;
   gap: 0.45rem;
   margin: 0.5rem 0 1rem;
+}
+
+.md-typeset img.project-hero {
+  display: block;
+  width: 100%;
+  margin: 0.7rem 0 1.2rem;
+  border: 1px solid var(--wiki-card-border);
+  border-radius: 14px;
+  box-shadow: var(--wiki-card-shadow);
+  background: var(--wiki-card-bg);
 }
 
 .md-typeset [data-md-tag] a {
