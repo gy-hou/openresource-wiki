@@ -40,7 +40,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* H1 hiding is handled via template override (main.html) using page.meta.hide_title */
 
 .md-typeset {
   font-size: 0.82rem;
@@ -284,36 +283,47 @@ body {
    Single-line Navigation (header + tabs merged)
    ═══════════════════════════════════════ */
 
-/* Hide header title — tabs already show navigation */
+/* Header title: invisible but keeps flex spacer to push search right */
 .md-header__title {
+  visibility: hidden !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide repo widget */
+.md-header__source {
   display: none !important;
 }
 
-/* Kill shadow between header and tabs for seamless merge */
+/* Header: fixed height, no shadow */
 .md-header {
   box-shadow: none !important;
+  z-index: 3;
 }
 
-/* Compact header row — just logo + search + toggle */
 .md-header__inner {
-  height: 2.4rem;
+  height: 2.8rem;
   min-height: 0;
 }
 
-/* Logo: scale down to fit compact header */
-.md-header__button.md-logo {
-  padding: 0.2rem;
+/* Pull tabs UP into the header space */
+.md-tabs {
+  margin-top: -2.8rem;
+  z-index: 4;
+  top: 0 !important;
+  background: transparent !important;
+  pointer-events: none;
 }
 
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 1.2rem;
-  width: 1.2rem;
+.md-tabs * {
+  pointer-events: auto;
 }
 
-/* Hide repo widget from header */
-.md-header__source {
-  display: none !important;
+/* Indent tabs past logo, leave room for search on right */
+.md-tabs .md-grid {
+  padding-left: 2.8rem;
+  margin-right: 14rem;
 }
 
 /* Softer search box */
@@ -324,16 +334,16 @@ body {
 }
 
 .md-search__form:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
 }
 
 [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
   border-radius: 0.5rem !important;
 }
 
-/* Tabs: tighter to merge visually with header */
-.md-tabs {
-  padding: 0;
+/* Hide all page H1 — navigation already indicates the section */
+.md-content > .md-typeset > h1:first-child {
+  display: none !important;
 }
 
 @media screen and (max-width: 76.2344em) {
@@ -766,11 +776,6 @@ a:hover .xhs-card {
   content: "» ";
 }
 
-/* Hide redundant blog page H1 (nav already shows 博客) */
-.md-typeset h1:first-child:has(+ .md-button),
-.md-content > .md-typeset > h1:first-of-type {
-  /* keep visible but auto-handled by Material */
-}
 
 /* Tags on posts */
 .md-post .md-tags {
