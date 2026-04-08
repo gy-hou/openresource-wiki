@@ -146,6 +146,7 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - assets/javascripts/chat.js
   - assets/javascripts/prompt-copy-hotfix.js
+  - assets/javascripts/wechat-share-hotfix.js
 
 copyright: Copyright &copy; 2025-2026 gy-hou | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 
