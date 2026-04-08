@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# AI Wiki
+# Openresource-Wiki
 
 > 🤖 AI 工具、Prompts、Skills，技术帖的开源分享站
 >
@@ -19,10 +19,6 @@ hide:
   ("OpenClaw 全攻略", "blog/openclaw-advanced/", "openclaw-advanced"),
   ("Claude Code 泄漏版解析", "blog/claude-code-memory-analysis/", "claude-code-memory-analysis"),
 ]) }}
-
-## 关于我
-
-🎓 USTC · 🤖 专注 AI 工具测评 / 前沿模型解读 / Fintech · 🔬 [学术主页](https://gy-hou.github.io) · [更多关于我 →](about/)
 
 ## 板块导航
 

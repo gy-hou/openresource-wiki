@@ -280,11 +280,63 @@ body {
   background: var(--wiki-table-zebra);
 }
 
-@media screen and (max-width: 76.2344em) {
-  .md-header__title {
-    font-size: 0.9rem;
-  }
+/* ═══════════════════════════════════════
+   Single-line Navigation (header + tabs merged)
+   ═══════════════════════════════════════ */
 
+/* Hide header title — tabs already show navigation */
+.md-header__title {
+  display: none !important;
+}
+
+/* Kill shadow between header and tabs for seamless merge */
+.md-header {
+  box-shadow: none !important;
+}
+
+/* Compact header row — just logo + search + toggle */
+.md-header__inner {
+  height: 2.4rem;
+  min-height: 0;
+}
+
+/* Logo: scale down to fit compact header */
+.md-header__button.md-logo {
+  padding: 0.2rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+/* Hide repo widget from header */
+.md-header__source {
+  display: none !important;
+}
+
+/* Softer search box */
+.md-search__form {
+  border-radius: 1.2rem !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  transition: background 0.2s ease;
+}
+
+.md-search__form:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-radius: 0.5rem !important;
+}
+
+/* Tabs: tighter to merge visually with header */
+.md-tabs {
+  padding: 0;
+}
+
+@media screen and (max-width: 76.2344em) {
   .md-nav--primary .md-nav__item {
     font-size: 0.78rem;
   }
@@ -316,9 +368,6 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
-  .md-header__title {
-    font-size: 0.82rem;
-  }
 
   .md-nav--primary .md-nav__title {
     padding: 0.8rem 0.9rem;

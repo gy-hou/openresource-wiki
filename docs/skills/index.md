@@ -13,6 +13,7 @@ hide:
 |-------|------|
 | [小红书知识卡片生成器](templates/xhs-card-generator.md) | Markdown → 小红书风格图片卡片 |
 | [博客标签自动提取](templates/auto-tag-extractor.md) | DeepSeek API 自动打标签 |
+| [Chrome CDP 双实例调试](templates/chrome-cdp-setup.md) | Chrome 146+ 远程调试架构，多工具兼容 |
 
 ## 收集
 

@@ -1,8 +1,7 @@
-site_name: "AI Wiki"
+site_name: "Openresource-Wiki"
 site_url: https://gy-hou.github.io/openresource-wiki/
 site_author: gy-hou
 site_description: "AI 工具、Prompts、Skills 开源分享 | 小红书同名博主"
-repo_name: gy-hou/openresource-wiki
 repo_url: https://github.com/gy-hou/openresource-wiki
 edit_uri: edit/main/docs/
 use_directory_urls: true
@@ -165,6 +164,7 @@ nav:
     - skills/index.md
     - ⭐ 小红书卡片生成器: skills/templates/xhs-card-generator.md
     - ⭐ 标签自动提取: skills/templates/auto-tag-extractor.md
+    - ⭐ Chrome CDP 调试: skills/templates/chrome-cdp-setup.md
     - LLM Wiki Agent: skills/templates/llm-wiki-agent.md
   - 工具箱:
     - toolbox/index.md
