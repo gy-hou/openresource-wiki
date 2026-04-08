@@ -1,10 +1,9 @@
 ---
 title: "Prompt 库"
+hide_title: true
 hide:
   - toc
 ---
-
-<style>.md-content h1 { display: none !important; }</style>
 
 好的 Prompt 不是咒语，是你把思路讲清楚的过程。带 ⭐ 为自研。
 

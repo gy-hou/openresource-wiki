@@ -31,4 +31,8 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="AI Wiki" href="{{ config.site_url }}feed_rss_created.xml">
+
+  {% if page and page.meta and page.meta.hide_title %}
+  <style>.md-content > .md-typeset > h1:first-child { display: none !important; }</style>
+  {% endif %}
 {% endblock %}

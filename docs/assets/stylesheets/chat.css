@@ -6,8 +6,13 @@
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  z-index: 9999;
+  z-index: 3;
   font-family: "Noto Sans SC", sans-serif;
+}
+
+/* When chat is open, raise above everything */
+#ai-chat-wrapper:has(#ai-chat-panel.open) {
+  z-index: 9999;
 }
 
 #ai-chat-btn {

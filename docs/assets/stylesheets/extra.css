@@ -40,6 +40,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* H1 hiding is handled via template override (main.html) using page.meta.hide_title */
+
 .md-typeset {
   font-size: 0.82rem;
   line-height: 1.8;

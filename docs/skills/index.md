@@ -1,10 +1,9 @@
 ---
 title: "Skills 库"
+hide_title: true
 hide:
   - toc
 ---
-
-<style>.md-content h1 { display: none !important; }</style>
 
 能复用的才叫技能，只用一次的叫灵感。带 ⭐ 为自研。
 

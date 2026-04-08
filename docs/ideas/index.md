@@ -1,10 +1,9 @@
 ---
 title: "Ideas"
+hide_title: true
 hide:
   - toc
 ---
-
-<style>.md-content h1 { display: none !important; }</style>
 
 想法不值钱，但不记录下来连不值钱的机会都没有。点击展开阅读。
 
