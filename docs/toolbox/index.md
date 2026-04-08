@@ -1,13 +1,24 @@
 ---
-title: "工具箱"
-hide_title: true
+title: "工具库"
 hide:
   - toc
 ---
 
-工具本身不重要，用工具解决问题才重要。
+Prompts、Skills、AI 平台、开发工具 — 一站打通。
 
 <div class="card-grid">
+
+<a class="card" href="../prompts/">
+  <div class="card-icon">💡</div>
+  <div class="card-title">Prompts</div>
+  <div class="card-desc">精心调试的 Prompt 合集，覆盖编程 / 写作 / 研究</div>
+</a>
+
+<a class="card" href="../skills/">
+  <div class="card-icon">🛠️</div>
+  <div class="card-title">Skills</div>
+  <div class="card-desc">可复用的自动化技能模板，多工具兼容</div>
+</a>
 
 <a class="card" href="ai-platforms/">
   <div class="card-icon">🤖</div>

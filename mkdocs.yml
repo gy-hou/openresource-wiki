@@ -51,7 +51,7 @@ theme:
     edit: material/pencil
     view: material/eye
     logo: material/robot-happy-outline
-  favicon: assets/images/favicon.ico
+  # favicon: assets/images/favicon.ico  # TODO: add a real favicon
 
 markdown_extensions:
   - admonition
@@ -151,23 +151,23 @@ nav:
   - 首页: index.md
   - 博客:
     - blog/index.md
-  - Prompt 库:
-    - prompts/index.md
-    - ⭐ CC 工程化工作流: prompts/coding/claude-code-workflow.md
-    - ⭐ 技术博客写作: prompts/writing/tech-blog-writer.md
-    - ⭐ LLM 知识库管理: prompts/research/knowledge-base-manager.md
-    - 代码审查: prompts/coding/code-review-prompt.md
-    - 小红书写作: prompts/writing/xiaohongshu-writer.md
-    - 论文精读: prompts/research/paper-reader.md
-    - System Prompt 模板: prompts/system/ai-assistant-system.md
-  - Skills 库:
-    - skills/index.md
-    - ⭐ 小红书卡片生成器: skills/templates/xhs-card-generator.md
-    - ⭐ 标签自动提取: skills/templates/auto-tag-extractor.md
-    - ⭐ Chrome CDP 调试: skills/templates/chrome-cdp-setup.md
-    - LLM Wiki Agent: skills/templates/llm-wiki-agent.md
-  - 工具箱:
+  - 工具库:
     - toolbox/index.md
+    - Prompts:
+      - prompts/index.md
+      - ⭐ CC 工程化工作流: prompts/coding/claude-code-workflow.md
+      - ⭐ 技术博客写作: prompts/writing/tech-blog-writer.md
+      - ⭐ LLM 知识库管理: prompts/research/knowledge-base-manager.md
+      - 代码审查: prompts/coding/code-review-prompt.md
+      - 小红书写作: prompts/writing/xiaohongshu-writer.md
+      - 论文精读: prompts/research/paper-reader.md
+      - System Prompt 模板: prompts/system/ai-assistant-system.md
+    - Skills:
+      - skills/index.md
+      - ⭐ 小红书卡片生成器: skills/templates/xhs-card-generator.md
+      - ⭐ 标签自动提取: skills/templates/auto-tag-extractor.md
+      - ⭐ Chrome CDP 调试: skills/templates/chrome-cdp-setup.md
+      - LLM Wiki Agent: skills/templates/llm-wiki-agent.md
     - AI 平台:
       - toolbox/ai-platforms/index.md
       - 主流 AI 模型实测对比: toolbox/ai-platforms/model-comparison.md
@@ -179,6 +179,10 @@ nav:
       - 搭建个人 Wiki 的工具清单: toolbox/workflows/wiki-setup-tools.md
   - 项目:
     - projects/index.md
+    - TrendR: projects/trendr.md
+    - OpenClaw: projects/openclaw.md
+    - Openresource-Wiki: projects/openresource-wiki.md
+    - Advanced Prompts DB: projects/advanced-prompts-db.md
   - Ideas:
     - ideas/index.md
   - 关于:

@@ -6,7 +6,7 @@ hide:
 
 # Openresource-Wiki
 
-> 🤖 AI 工具、Prompts、Skills，技术帖的开源分享站
+> **Lucas** — Research-minded builder working on AI systems, agent workflows, and FinTech research.
 >
 > 把小红书装不下的干货，都放在这里。
 
@@ -30,28 +30,16 @@ hide:
   <div class="card-desc">小红书热帖文字版、AI 热点解读、实操教程</div>
 </a>
 
-<a class="card" href="prompts/">
-  <div class="card-icon">💡</div>
-  <div class="card-title">Prompt 库</div>
-  <div class="card-desc">精心调试的 Prompt 合集，覆盖编程 / 写作 / 研究</div>
-</a>
-
-<a class="card" href="skills/">
-  <div class="card-icon">🛠️</div>
-  <div class="card-title">Skills 库</div>
-  <div class="card-desc">Claude Skills 和自动化工作流模板</div>
-</a>
-
 <a class="card" href="toolbox/">
   <div class="card-icon">🧰</div>
-  <div class="card-title">工具箱</div>
-  <div class="card-desc">AI 工具推荐、平台对比、工作流搭建</div>
+  <div class="card-title">工具库</div>
+  <div class="card-desc">Prompts、Skills、AI 平台、开发工具一站打通</div>
 </a>
 
 <a class="card" href="projects/">
   <div class="card-icon">🚀</div>
   <div class="card-title">项目</div>
-  <div class="card-desc">开源项目展示：TrendR、OpenClaw 等</div>
+  <div class="card-desc">TrendR、OpenClaw 等开源项目详情</div>
 </a>
 
 <a class="card" href="ideas/">
