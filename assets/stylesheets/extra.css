@@ -397,6 +397,20 @@ body {
   }
 }
 
+/* Blog post cover (bottom of post) */
+.blog-cover {
+  margin: 2rem 0 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.blog-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 /* ═══════════════════════════════════════
    Repository & Social Cards
    ═══════════════════════════════════════ */
