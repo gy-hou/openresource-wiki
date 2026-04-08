@@ -12,29 +12,29 @@
         <meta name="author" content="gy-hou">
       
       
-        <link rel="canonical" href="https://gy-hou.github.io/openresource-wiki/tags/">
+        <link rel="canonical" href="https://gy-hou.github.io/openresource-wiki/blog/wechat-ai-agent-architecture/">
       
       
-        <link rel="prev" href="../about/roadmap/">
+        <link rel="prev" href="../karpathy-knowledge-base/">
       
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>标签 - Openresource-Wiki</title>
+        <title>我把整个微信社交上下文接给了 Agent - Openresource-Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/chat.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/chat.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,23 +71,25 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="标签 - Openresource-Wiki">
+  <meta property="og:title" content="我把整个微信社交上下文接给了 Agent - Openresource-Wiki">
   <meta property="og:description" content="AI 工具、Prompts、Skills 开源分享 | 小红书同名博主">
-  <meta property="og:url" content="https://gy-hou.github.io/openresource-wiki/tags/">
+  <meta property="og:url" content="https://gy-hou.github.io/openresource-wiki/blog/wechat-ai-agent-architecture/">
   <meta property="og:site_name" content="Openresource-Wiki">
   <meta property="og:image" content="https://gy-hou.github.io/openresource-wiki/assets/images/og-default.png">
   <meta property="og:locale" content="zh_CN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="标签 - Openresource-Wiki">
+  <meta name="twitter:title" content="我把整个微信社交上下文接给了 Agent - Openresource-Wiki">
   <meta name="twitter:description" content="AI 工具、Prompts、Skills 开源分享 | 小红书同名博主">
   <meta name="twitter:image" content="https://gy-hou.github.io/openresource-wiki/assets/images/og-default.png">
 
   <!-- 额外 SEO -->
   <meta name="author" content="gy-hou">
-  <link rel="canonical" href="https://gy-hou.github.io/openresource-wiki/tags/">
+  <link rel="canonical" href="https://gy-hou.github.io/openresource-wiki/blog/wechat-ai-agent-architecture/">
 
+  
+  <meta property="article:published_time" content="2026-04-09">
   
 
   <!-- RSS -->
@@ -113,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#agent" class="md-skip">
           跳转至
         </a>
       
@@ -129,7 +131,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Openresource-Wiki" class="md-header__button md-logo" aria-label="Openresource-Wiki" data-md-component="logo">
+    <a href="../.." title="Openresource-Wiki" class="md-header__button md-logo" aria-label="Openresource-Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg>
@@ -149,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              标签
+              我把整个微信社交上下文接给了 Agent
             
           </span>
         </div>
@@ -257,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -272,11 +274,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -296,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../toolbox/" class="md-tabs__link">
+        <a href="../../toolbox/" class="md-tabs__link">
           
   
     
@@ -316,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../projects/" class="md-tabs__link">
+        <a href="../../projects/" class="md-tabs__link">
           
   
     
@@ -336,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ideas/" class="md-tabs__link">
+        <a href="../../ideas/" class="md-tabs__link">
           
   
     
@@ -356,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about/" class="md-tabs__link">
+        <a href="../../about/" class="md-tabs__link">
           
   
     
@@ -372,11 +376,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
         
   
     
@@ -418,7 +420,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Openresource-Wiki" class="md-nav__button md-logo" aria-label="Openresource-Wiki" data-md-component="logo">
+    <a href="../.." title="Openresource-Wiki" class="md-nav__button md-logo" aria-label="Openresource-Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg>
@@ -448,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,6 +468,8 @@
       
   
   
+    
+  
   
   
     
@@ -482,21 +486,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../blog/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -508,13 +515,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             博客
@@ -539,17 +546,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -577,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/archive/2026/" class="md-nav__link">
+      <a href="../archive/2026/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,17 +632,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -660,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/category/ai-%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+      <a href="../category/ai-%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/category/ai-%E5%B7%A5%E7%A8%8B/" class="md-nav__link">
+      <a href="../category/ai-%E5%B7%A5%E7%A8%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/category/%E7%83%AD%E7%82%B9%E8%A7%A3%E8%AF%BB/" class="md-nav__link">
+      <a href="../category/%E7%83%AD%E7%82%B9%E8%A7%A3%E8%AF%BB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/category/%E9%A1%B9%E7%9B%AE/" class="md-nav__link">
+      <a href="../category/%E9%A1%B9%E7%9B%AE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +815,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../toolbox/" class="md-nav__link ">
+            <a href="../../toolbox/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -873,7 +886,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../prompts/" class="md-nav__link ">
+            <a href="../../prompts/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -907,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/coding/claude-code-workflow/" class="md-nav__link">
+      <a href="../../prompts/coding/claude-code-workflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/writing/tech-blog-writer/" class="md-nav__link">
+      <a href="../../prompts/writing/tech-blog-writer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/research/knowledge-base-manager/" class="md-nav__link">
+      <a href="../../prompts/research/knowledge-base-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/coding/code-review-prompt/" class="md-nav__link">
+      <a href="../../prompts/coding/code-review-prompt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -995,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/writing/xiaohongshu-writer/" class="md-nav__link">
+      <a href="../../prompts/writing/xiaohongshu-writer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/research/paper-reader/" class="md-nav__link">
+      <a href="../../prompts/research/paper-reader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prompts/system/ai-assistant-system/" class="md-nav__link">
+      <a href="../../prompts/system/ai-assistant-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1100,7 +1113,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../skills/" class="md-nav__link ">
+            <a href="../../skills/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1134,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../skills/templates/xhs-card-generator/" class="md-nav__link">
+      <a href="../../skills/templates/xhs-card-generator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../skills/templates/auto-tag-extractor/" class="md-nav__link">
+      <a href="../../skills/templates/auto-tag-extractor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../skills/templates/chrome-cdp-setup/" class="md-nav__link">
+      <a href="../../skills/templates/chrome-cdp-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../skills/templates/llm-wiki-agent/" class="md-nav__link">
+      <a href="../../skills/templates/llm-wiki-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1268,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../toolbox/ai-platforms/" class="md-nav__link ">
+            <a href="../../toolbox/ai-platforms/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1289,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toolbox/ai-platforms/model-comparison/" class="md-nav__link">
+      <a href="../../toolbox/ai-platforms/model-comparison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1357,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../toolbox/dev-tools/" class="md-nav__link ">
+            <a href="../../toolbox/dev-tools/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1378,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toolbox/dev-tools/ai-coding-tools/" class="md-nav__link">
+      <a href="../../toolbox/dev-tools/ai-coding-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1446,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../toolbox/workflows/" class="md-nav__link ">
+            <a href="../../toolbox/workflows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1467,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toolbox/workflows/wiki-setup-tools/" class="md-nav__link">
+      <a href="../../toolbox/workflows/wiki-setup-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,7 +1548,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../projects/" class="md-nav__link ">
+            <a href="../../projects/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1569,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/trendr/" class="md-nav__link">
+      <a href="../../projects/trendr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/openclaw/" class="md-nav__link">
+      <a href="../../projects/openclaw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/openresource-wiki/" class="md-nav__link">
+      <a href="../../projects/openresource-wiki/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1635,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/advanced-prompts-db/" class="md-nav__link">
+      <a href="../../projects/advanced-prompts-db/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1687,7 +1700,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ideas/" class="md-nav__link ">
+            <a href="../../ideas/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1748,7 +1761,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../about/" class="md-nav__link ">
+            <a href="../../about/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1782,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/roadmap/" class="md-nav__link">
+      <a href="../../about/roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1808,31 +1821,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    标签
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1842,413 +1834,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tag:ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      AI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:ai-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      AI Agent
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:ai模型" class="md-nav__link">
-    <span class="md-ellipsis">
-      AI模型
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:api" class="md-nav__link">
-    <span class="md-ellipsis">
-      API
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agent
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:agentic-rag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agentic RAG
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:cdp" class="md-nav__link">
-    <span class="md-ellipsis">
-      CDP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:chrome" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chrome
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:claude" class="md-nav__link">
-    <span class="md-ellipsis">
-      Claude
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:claude-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Claude Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:code-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code Review
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:deepseek" class="md-nav__link">
-    <span class="md-ellipsis">
-      DeepSeek
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:gpt" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:harness-engineering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Harness Engineering
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      JavaScript
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:karpathy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Karpathy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      MkDocs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:openclaw" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenClaw
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:system-prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Prompt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:trendr" class="md-nav__link">
-    <span class="md-ellipsis">
-      TrendR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:wiki" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wiki
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      prompt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:skill" class="md-nav__link">
-    <span class="md-ellipsis">
-      skill
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:写作" class="md-nav__link">
-    <span class="md-ellipsis">
-      写作
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:对比" class="md-nav__link">
-    <span class="md-ellipsis">
-      对比
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:小红书" class="md-nav__link">
-    <span class="md-ellipsis">
-      小红书
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:工作流" class="md-nav__link">
-    <span class="md-ellipsis">
-      工作流
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:工具" class="md-nav__link">
-    <span class="md-ellipsis">
-      工具
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:开源" class="md-nav__link">
-    <span class="md-ellipsis">
-      开源
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:微信" class="md-nav__link">
-    <span class="md-ellipsis">
-      微信
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:效率" class="md-nav__link">
-    <span class="md-ellipsis">
-      效率
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:教程" class="md-nav__link">
-    <span class="md-ellipsis">
-      教程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:模板" class="md-nav__link">
-    <span class="md-ellipsis">
-      模板
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:浏览器" class="md-nav__link">
-    <span class="md-ellipsis">
-      浏览器
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:知识库" class="md-nav__link">
-    <span class="md-ellipsis">
-      知识库
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:研究" class="md-nav__link">
-    <span class="md-ellipsis">
-      研究
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:编程" class="md-nav__link">
-    <span class="md-ellipsis">
-      编程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:自动化" class="md-nav__link">
-    <span class="md-ellipsis">
-      自动化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:论文" class="md-nav__link">
-    <span class="md-ellipsis">
-      论文
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:路线图" class="md-nav__link">
-    <span class="md-ellipsis">
-      路线图
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:长期记忆" class="md-nav__link">
-    <span class="md-ellipsis">
-      长期记忆
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:项目" class="md-nav__link">
-    <span class="md-ellipsis">
-      项目
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2263,7 +1848,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2282,387 +1867,261 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tag:ai" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
-      AI
+      TL;DR
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag:ai-agent" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      AI Agent
+      先说结论：这东西为什么强
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag:ai模型" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      AI模型
+      核心数据流
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag:api" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      API
+      六层架构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六层架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 数据采集层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 桥接层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 智能决策层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 调度层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 存储层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 输出层
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      这套系统最猛的 9 个能力
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="这套系统最猛的 9 个能力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 承诺追踪器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 上下文感知打断
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 关系衰减预警
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 跨对话信息回溯
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 情绪感知与交互自适应
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 生活轨迹时间轴
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 自动日记系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. IoT 联动控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 社交日程整合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么这条路线比普通 bot 方案高一个量级
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag:agent" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Agent
+      这件事最现实的边界
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="这件事最现实的边界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      低风险部分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      中风险部分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      高风险部分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      现在最值得继续补的，不是“再换一个模型”
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tag:agentic-rag" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
-      Agentic RAG
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:cdp" class="md-nav__link">
-    <span class="md-ellipsis">
-      CDP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:chrome" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chrome
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:claude" class="md-nav__link">
-    <span class="md-ellipsis">
-      Claude
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:claude-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Claude Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:code-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code Review
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:deepseek" class="md-nav__link">
-    <span class="md-ellipsis">
-      DeepSeek
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:gpt" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPT
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:harness-engineering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Harness Engineering
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      JavaScript
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:karpathy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Karpathy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      MkDocs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:openclaw" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenClaw
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:system-prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Prompt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:trendr" class="md-nav__link">
-    <span class="md-ellipsis">
-      TrendR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:wiki" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wiki
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      prompt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:skill" class="md-nav__link">
-    <span class="md-ellipsis">
-      skill
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:写作" class="md-nav__link">
-    <span class="md-ellipsis">
-      写作
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:对比" class="md-nav__link">
-    <span class="md-ellipsis">
-      对比
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:小红书" class="md-nav__link">
-    <span class="md-ellipsis">
-      小红书
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:工作流" class="md-nav__link">
-    <span class="md-ellipsis">
-      工作流
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:工具" class="md-nav__link">
-    <span class="md-ellipsis">
-      工具
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:开源" class="md-nav__link">
-    <span class="md-ellipsis">
-      开源
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:微信" class="md-nav__link">
-    <span class="md-ellipsis">
-      微信
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:效率" class="md-nav__link">
-    <span class="md-ellipsis">
-      效率
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:教程" class="md-nav__link">
-    <span class="md-ellipsis">
-      教程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:模板" class="md-nav__link">
-    <span class="md-ellipsis">
-      模板
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:浏览器" class="md-nav__link">
-    <span class="md-ellipsis">
-      浏览器
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:知识库" class="md-nav__link">
-    <span class="md-ellipsis">
-      知识库
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:研究" class="md-nav__link">
-    <span class="md-ellipsis">
-      研究
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:编程" class="md-nav__link">
-    <span class="md-ellipsis">
-      编程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:自动化" class="md-nav__link">
-    <span class="md-ellipsis">
-      自动化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:论文" class="md-nav__link">
-    <span class="md-ellipsis">
-      论文
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:路线图" class="md-nav__link">
-    <span class="md-ellipsis">
-      路线图
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:长期记忆" class="md-nav__link">
-    <span class="md-ellipsis">
-      长期记忆
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tag:项目" class="md-nav__link">
-    <span class="md-ellipsis">
-      项目
+      最后
     </span>
   </a>
   
@@ -2677,16 +2136,103 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-04-09 00:00:00+00:00" class="md-ellipsis">2026-04-09</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            分类于
+                            
+                              <a href="../category/%E9%A1%B9%E7%9B%AE/">项目</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
   
 
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../tags/#tag:agent" class="md-tag">Agent</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:claude-code" class="md-tag">Claude Code</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:openclaw" class="md-tag">OpenClaw</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:微信" class="md-tag">微信</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:自动化" class="md-tag">自动化</a>
+      
+    
+  </nav>
+
 
   
-    <a href="https://github.com/gy-hou/openresource-wiki/edit/main/docs/tags.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/gy-hou/openresource-wiki/edit/main/docs/blog/posts/2026-04-09-wechat-ai-agent-architecture.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -2694,1017 +2240,282 @@
   
 
 
-<h1 id="_1">标签索引<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="agent">我把整个微信社交上下文接给了 Agent<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>🏷️ 按标签浏览所有内容</p>
+<p>这不是“做了个微信机器人”，而是把 WeFlow、ilink 和 Agent 大脑焊成了一套主动式个人管家系统。</p>
 </blockquote>
-
-
-  <h2 id="tag:ai">
-
-
-<span class="md-tag">AI</span><a class="headerlink" href="#tag:ai" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/dev-tools/ai-coding-tools/">
-          AI 编程工具全景图
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/trendr/">
-          TrendR
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:ai-agent">
-
-
-<span class="md-tag">AI Agent</span><a class="headerlink" href="#tag:ai-agent" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/claude-code-memory-analysis/">
-          Claude Code 泄漏版：智能体长期记忆与自我进化解析
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/openclaw-harness-engineering/">
-          从 OpenClaw 看 Harness Engineering：2026 年 AI Agent 真正的壁垒，可能已经不是模型了
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:ai模型">
-
-
-<span class="md-tag">AI模型</span><a class="headerlink" href="#tag:ai模型" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/ai-platforms/model-comparison/">
-          主流 AI 模型实测对比
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:api">
-
-
-<span class="md-tag">API</span><a class="headerlink" href="#tag:api" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/deepseek-api-%E5%AE%8C%E5%85%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-          DeepSeek API 完全使用指南
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:agent">
-
-
-<span class="md-tag">Agent</span><a class="headerlink" href="#tag:agent" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/llm-wiki-agent/">
-          LLM Wiki Agent
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/openclaw/">
-          OpenClaw
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/wechat-ai-agent-architecture/">
-          我把整个微信社交上下文接给了 Agent
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:agentic-rag">
-
-
-<span class="md-tag">Agentic RAG</span><a class="headerlink" href="#tag:agentic-rag" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/karpathy-ai-auto-research-trendr/">
-          Karpathy AI 自动实验启发：让 AI 自动写综述
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:cdp">
-
-
-<span class="md-tag">CDP</span><a class="headerlink" href="#tag:cdp" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/chrome-cdp-setup/">
-          ⭐ Chrome CDP 调试
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:chrome">
-
-
-<span class="md-tag">Chrome</span><a class="headerlink" href="#tag:chrome" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/chrome-cdp-setup/">
-          ⭐ Chrome CDP 调试
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:claude">
-
-
-<span class="md-tag">Claude</span><a class="headerlink" href="#tag:claude" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/2026-%E5%B9%B4-ai-%E6%A8%A1%E5%9E%8B%E6%A0%BC%E5%B1%80%E8%B0%81%E5%9C%A8%E9%A2%86%E8%B7%91/">
-          2026 年 AI 模型格局：谁在领跑？
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:claude-code">
-
-
-<span class="md-tag">Claude Code</span><a class="headerlink" href="#tag:claude-code" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/claude-code-memory-analysis/">
-          Claude Code 泄漏版：智能体长期记忆与自我进化解析
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/claude-code-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
-          Claude Code 进阶使用技巧
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/claude-code-workflow/">
-          ⭐ CC 工程化工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/research/knowledge-base-manager/">
-          ⭐ LLM 知识库管理
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/karpathy-knowledge-base/">
-          一个 Prompt + 工具清单，搭建 Karpathy 本地知识库
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/wechat-ai-agent-architecture/">
-          我把整个微信社交上下文接给了 Agent
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:code-review">
-
-
-<span class="md-tag">Code Review</span><a class="headerlink" href="#tag:code-review" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/coding/code-review-prompt/">
-          代码审查
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:deepseek">
-
-
-<span class="md-tag">DeepSeek</span><a class="headerlink" href="#tag:deepseek" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/2026-%E5%B9%B4-ai-%E6%A8%A1%E5%9E%8B%E6%A0%BC%E5%B1%80%E8%B0%81%E5%9C%A8%E9%A2%86%E8%B7%91/">
-          2026 年 AI 模型格局：谁在领跑？
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/deepseek-api-%E5%AE%8C%E5%85%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-          DeepSeek API 完全使用指南
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:gpt">
-
-
-<span class="md-tag">GPT</span><a class="headerlink" href="#tag:gpt" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/2026-%E5%B9%B4-ai-%E6%A8%A1%E5%9E%8B%E6%A0%BC%E5%B1%80%E8%B0%81%E5%9C%A8%E9%A2%86%E8%B7%91/">
-          2026 年 AI 模型格局：谁在领跑？
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:harness-engineering">
-
-
-<span class="md-tag">Harness Engineering</span><a class="headerlink" href="#tag:harness-engineering" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/openclaw-harness-engineering/">
-          从 OpenClaw 看 Harness Engineering：2026 年 AI Agent 真正的壁垒，可能已经不是模型了
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:javascript">
-
-
-<span class="md-tag">JavaScript</span><a class="headerlink" href="#tag:javascript" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../projects/advanced-prompts-db/">
-          Advanced Prompts DB
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:karpathy">
-
-
-<span class="md-tag">Karpathy</span><a class="headerlink" href="#tag:karpathy" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/karpathy-ai-auto-research-trendr/">
-          Karpathy AI 自动实验启发：让 AI 自动写综述
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:mkdocs">
-
-
-<span class="md-tag">MkDocs</span><a class="headerlink" href="#tag:mkdocs" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../projects/openresource-wiki/">
-          Openresource-Wiki
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:openclaw">
-
-
-<span class="md-tag">OpenClaw</span><a class="headerlink" href="#tag:openclaw" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/openclaw-advanced/">
-          OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/openclaw-harness-engineering/">
-          从 OpenClaw 看 Harness Engineering：2026 年 AI Agent 真正的壁垒，可能已经不是模型了
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/wechat-ai-agent-architecture/">
-          我把整个微信社交上下文接给了 Agent
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:python">
-
-
-<span class="md-tag">Python</span><a class="headerlink" href="#tag:python" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../projects/trendr/">
-          TrendR
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:system-prompt">
-
-
-<span class="md-tag">System Prompt</span><a class="headerlink" href="#tag:system-prompt" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/system/ai-assistant-system/">
-          System Prompt 模板
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:trendr">
-
-
-<span class="md-tag">TrendR</span><a class="headerlink" href="#tag:trendr" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/karpathy-ai-auto-research-trendr/">
-          Karpathy AI 自动实验启发：让 AI 自动写综述
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:wiki">
-
-
-<span class="md-tag">Wiki</span><a class="headerlink" href="#tag:wiki" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/workflows/wiki-setup-tools/">
-          搭建个人 Wiki 的工具清单
-        </a>
-      </li>
-    
-      <li>
-        <a href="../about/roadmap/">
-          路线图
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:prompt">
-
-
-<span class="md-tag">prompt</span><a class="headerlink" href="#tag:prompt" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/system/ai-assistant-system/">
-          System Prompt 模板
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/claude-code-workflow/">
-          ⭐ CC 工程化工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/research/knowledge-base-manager/">
-          ⭐ LLM 知识库管理
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/writing/tech-blog-writer/">
-          ⭐ 技术博客写作
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/code-review-prompt/">
-          代码审查
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/writing/xiaohongshu-writer/">
-          小红书写作
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/research/paper-reader/">
-          论文精读
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:skill">
-
-
-<span class="md-tag">skill</span><a class="headerlink" href="#tag:skill" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/llm-wiki-agent/">
-          LLM Wiki Agent
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/chrome-cdp-setup/">
-          ⭐ Chrome CDP 调试
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/xhs-card-generator/">
-          ⭐ 小红书卡片生成器
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/auto-tag-extractor/">
-          ⭐ 标签自动提取
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:写作">
-
-
-<span class="md-tag">写作</span><a class="headerlink" href="#tag:写作" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/writing/tech-blog-writer/">
-          ⭐ 技术博客写作
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/writing/xiaohongshu-writer/">
-          小红书写作
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:对比">
-
-
-<span class="md-tag">对比</span><a class="headerlink" href="#tag:对比" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/ai-platforms/model-comparison/">
-          主流 AI 模型实测对比
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:小红书">
-
-
-<span class="md-tag">小红书</span><a class="headerlink" href="#tag:小红书" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/xhs-card-generator/">
-          ⭐ 小红书卡片生成器
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/writing/xiaohongshu-writer/">
-          小红书写作
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:工作流">
-
-
-<span class="md-tag">工作流</span><a class="headerlink" href="#tag:工作流" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/openclaw-advanced/">
-          OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../toolbox/workflows/wiki-setup-tools/">
-          搭建个人 Wiki 的工具清单
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:工具">
-
-
-<span class="md-tag">工具</span><a class="headerlink" href="#tag:工具" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/dev-tools/ai-coding-tools/">
-          AI 编程工具全景图
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/karpathy-knowledge-base/">
-          一个 Prompt + 工具清单，搭建 Karpathy 本地知识库
-        </a>
-      </li>
-    
-      <li>
-        <a href="../toolbox/ai-platforms/model-comparison/">
-          主流 AI 模型实测对比
-        </a>
-      </li>
-    
-      <li>
-        <a href="../toolbox/workflows/wiki-setup-tools/">
-          搭建个人 Wiki 的工具清单
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:开源">
-
-
-<span class="md-tag">开源</span><a class="headerlink" href="#tag:开源" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../projects/advanced-prompts-db/">
-          Advanced Prompts DB
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/openclaw/">
-          OpenClaw
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/openresource-wiki/">
-          Openresource-Wiki
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:微信">
-
-
-<span class="md-tag">微信</span><a class="headerlink" href="#tag:微信" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/wechat-ai-agent-architecture/">
-          我把整个微信社交上下文接给了 Agent
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:效率">
-
-
-<span class="md-tag">效率</span><a class="headerlink" href="#tag:效率" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/claude-code-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
-          Claude Code 进阶使用技巧
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/claude-code-workflow/">
-          ⭐ CC 工程化工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/writing/tech-blog-writer/">
-          ⭐ 技术博客写作
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/auto-tag-extractor/">
-          ⭐ 标签自动提取
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:教程">
-
-
-<span class="md-tag">教程</span><a class="headerlink" href="#tag:教程" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/claude-code-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
-          Claude Code 进阶使用技巧
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/deepseek-api-%E5%AE%8C%E5%85%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-          DeepSeek API 完全使用指南
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/openclaw-advanced/">
-          OpenClaw 新手到高阶全攻略：技能矩阵到手搓工作流
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:模板">
-
-
-<span class="md-tag">模板</span><a class="headerlink" href="#tag:模板" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/system/ai-assistant-system/">
-          System Prompt 模板
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:浏览器">
-
-
-<span class="md-tag">浏览器</span><a class="headerlink" href="#tag:浏览器" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/chrome-cdp-setup/">
-          ⭐ Chrome CDP 调试
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:知识库">
-
-
-<span class="md-tag">知识库</span><a class="headerlink" href="#tag:知识库" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/llm-wiki-agent/">
-          LLM Wiki Agent
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/research/knowledge-base-manager/">
-          ⭐ LLM 知识库管理
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/karpathy-knowledge-base/">
-          一个 Prompt + 工具清单，搭建 Karpathy 本地知识库
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:研究">
-
-
-<span class="md-tag">研究</span><a class="headerlink" href="#tag:研究" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/research/knowledge-base-manager/">
-          ⭐ LLM 知识库管理
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/research/paper-reader/">
-          论文精读
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:编程">
-
-
-<span class="md-tag">编程</span><a class="headerlink" href="#tag:编程" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../toolbox/dev-tools/ai-coding-tools/">
-          AI 编程工具全景图
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/claude-code-workflow/">
-          ⭐ CC 工程化工作流
-        </a>
-      </li>
-    
-      <li>
-        <a href="../prompts/coding/code-review-prompt/">
-          代码审查
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:自动化">
-
-
-<span class="md-tag">自动化</span><a class="headerlink" href="#tag:自动化" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../skills/templates/chrome-cdp-setup/">
-          ⭐ Chrome CDP 调试
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/xhs-card-generator/">
-          ⭐ 小红书卡片生成器
-        </a>
-      </li>
-    
-      <li>
-        <a href="../skills/templates/auto-tag-extractor/">
-          ⭐ 标签自动提取
-        </a>
-      </li>
-    
-      <li>
-        <a href="../blog/wechat-ai-agent-architecture/">
-          我把整个微信社交上下文接给了 Agent
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:论文">
-
-
-<span class="md-tag">论文</span><a class="headerlink" href="#tag:论文" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../prompts/research/paper-reader/">
-          论文精读
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:路线图">
-
-
-<span class="md-tag">路线图</span><a class="headerlink" href="#tag:路线图" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../about/roadmap/">
-          路线图
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:长期记忆">
-
-
-<span class="md-tag">长期记忆</span><a class="headerlink" href="#tag:长期记忆" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../blog/claude-code-memory-analysis/">
-          Claude Code 泄漏版：智能体长期记忆与自我进化解析
-        </a>
-      </li>
-    
-    
-  </ul>
-
-
-
-  <h2 id="tag:项目">
-
-
-<span class="md-tag">项目</span><a class="headerlink" href="#tag:项目" title="Permanent link">&para;</a></h2>
-  <ul>
-    
-      <li>
-        <a href="../projects/advanced-prompts-db/">
-          Advanced Prompts DB
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/openclaw/">
-          OpenClaw
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/openresource-wiki/">
-          Openresource-Wiki
-        </a>
-      </li>
-    
-      <li>
-        <a href="../projects/trendr/">
-          TrendR
-        </a>
-      </li>
-    
-    
-  </ul>
-
+<!-- more -->
+
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<p>我现在这套 WeChat AI Agent，不是只会回你一句“收到”的 bot，而是能读全量聊天上下文、理解关系和承诺、主动决定什么时候提醒你、什么时候闭嘴、什么时候直接执行动作的系统。</p>
+<p>更关键的一点是，这条路线已经不是 PPT。消息监听、消息收发和 Agent 决策主链路都已经跑通了，剩下的是把“能力”继续产品化，而不是从 0 到 1 证明它能不能做。</p>
+<hr />
+<h2 id="_1">先说结论：这东西为什么强<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>大部分“聊天机器人”方案，本质上都还是单线程记事本。</p>
+<p>你跟 bot 说什么，它记什么；你不说，它就不知道；你不主动汇报，它就没有世界模型。这样的系统可以做提醒、做问答、做陪聊，但它理解不了你的真实生活上下文。</p>
+<p>而我现在这套方案，走的是完全不同的路径：</p>
+<ul>
+<li><strong>输入不是 bot 对话，而是微信全量聊天</strong></li>
+<li><strong>理解对象不是单条消息，而是你的社交整体</strong></li>
+<li><strong>行动方式不是等你发号施令，而是主动触发</strong></li>
+</ul>
+<p>这意味着 Agent 看到的，不再是一个对话框，而是一个真实的人际网络、时间流和承诺系统。</p>
+<p>一句话概括：</p>
+<blockquote>
+<p>不是给微信套一个 AI 壳，而是把你的微信社交生活变成 Agent 可计算、可推理、可执行的输入层。</p>
+</blockquote>
+<hr />
+<h2 id="_2">核心数据流<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>整条主链路可以压缩成 5 步：</p>
+<ol>
+<li><strong>微信全量聊天进入系统</strong>
+   WeFlow 负责本地解析和监听，拿到所有私聊、群聊、历史与新增消息。</li>
+<li><strong>桥接层把消息路由给 Agent</strong>
+   ilink 负责消息收发，桥接层负责协议转换、事件分发和统一入口。</li>
+<li><strong>Agent 大脑理解上下文并做决策</strong>
+   当前可接 OpenClaw，后续也可以切到 Claude Code、Codex 或混合编排。</li>
+<li><strong>调度层决定何时触发</strong>
+   定时任务、模式匹配、事件触发、随机唤醒，都可以组合。</li>
+<li><strong>输出层把决策发回微信或写进本地系统</strong>
+   包括微信提醒、消息回复、本地 Dashboard、时间轴、日报周报等。</li>
+</ol>
+<p>从工程视角看，这套东西最重要的不是某个模型选型，而是数据闭环终于成立了：</p>
+<p><code>微信聊天 -&gt; 解析 -&gt; 决策 -&gt; 触发 -&gt; 输出 -&gt; 新聊天继续回流</code></p>
+<p>一旦闭环成立，后面的功能都是在这个回路上叠能力。</p>
+<hr />
+<h2 id="_3">六层架构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 数据采集层<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>这一层解决的是“能不能拿到足够真实的数据”。</p>
+<p>当前已经跑通的核心是：</p>
+<ul>
+<li><code>WeFlow</code> 全量监听</li>
+<li><code>ilink</code> 收消息</li>
+<li>微信消息的持续接入</li>
+</ul>
+<p>后续还会补：</p>
+<ul>
+<li>每条消息的时间戳注入</li>
+<li>回复延迟、长度、频率等元数据提取</li>
+<li>更细粒度的会话行为特征</li>
+</ul>
+<p>如果没有这一层，后面的 Agent 再聪明，也只是空气推理。</p>
+<h3 id="2">2. 桥接层<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>这一层不花哨，但它决定系统能不能稳定活着。</p>
+<p>核心职责包括：</p>
+<ul>
+<li>把 WeFlow 的消息变成 Agent 能处理的统一事件</li>
+<li>把 Agent 的动作重新路由回微信发送端</li>
+<li>处理不同组件之间的协议差异</li>
+</ul>
+<p>这里可以继续接：</p>
+<ul>
+<li><code>cc-connect</code></li>
+<li><code>CLI-WeChat-Bridge</code></li>
+<li>自定义 <code>Event Bus</code></li>
+</ul>
+<p>桥接层做得好，后面换模型、换调度器、换前端都不会伤筋动骨。</p>
+<h3 id="3">3. 智能决策层<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>这是整套系统最关键的地方。</p>
+<p>当前在用的是 <code>OpenClaw</code>，但设计上并没有把自己锁死在单一 Agent 栈里。Claude Code、Codex 都能接进来，甚至可以做分工式多 Agent。</p>
+<p>这一层后续要补的重点有三个：</p>
+<ul>
+<li><strong>承诺提取</strong>
+  自动扫描“我答应你了什么”“我什么时候该交付”</li>
+<li><strong>情绪推断</strong>
+  不只是看文本，还看回复延迟、长度、频率、emoji 模式</li>
+<li><strong>上下文感知决策</strong>
+  判断现在该不该提醒、该怎么提醒、提醒到什么程度</li>
+</ul>
+<p>真正厉害的地方不在“能回答问题”，而在“知道什么时候别说废话，什么时候必须站出来”。</p>
+<h3 id="4">4. 调度层<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>如果没有调度层，Agent 永远只能被动等你叫它。</p>
+<p>而主动式系统的价值，恰恰来自触发逻辑：</p>
+<ul>
+<li>定时任务</li>
+<li>随机唤醒</li>
+<li>消息模式匹配</li>
+<li>Agent 自己设置提醒队列</li>
+</ul>
+<p>这层一接上，系统的形态就从“工具”变成“管家”。</p>
+<h3 id="5">5. 存储层<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>要做长期价值，必须把聊天从一次性文本变成结构化资产。</p>
+<p>这层后续要沉淀的数据包括：</p>
+<ul>
+<li>承诺数据库</li>
+<li>关系图谱</li>
+<li>时间轴数据</li>
+<li>自动日记</li>
+<li>社交互动统计</li>
+</ul>
+<p>WeFlow 本地数据库已经是很强的基础，接下来要做的是把“看得见的聊天”变成“可推理的长期记忆”。</p>
+<h3 id="6">6. 输出层<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>最终输出不该只是一条回复消息。</p>
+<p>它可以是：</p>
+<ul>
+<li>微信提醒</li>
+<li>自动回复</li>
+<li>本地前端 Dashboard</li>
+<li>生活时间轴</li>
+<li>日报 / 周报</li>
+<li>截图式报表推送</li>
+<li>智能家居联动</li>
+</ul>
+<p>当输出层足够丰富时，Agent 才不是一个聊天框，而是你数字生活的操作台。</p>
+<hr />
+<h2 id="9">这套系统最猛的 9 个能力<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1. 承诺追踪器<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>你在聊天里随口答应别人的事，通常是最容易遗忘的。<br />
+这个系统能把“社交债务”自动提取成待办，而不是等你自己想起来。</p>
+<h3 id="2_1">2. 上下文感知打断<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p>不是随机 ping 你，而是判断你当下是在认真聊工作，还是已经在闲聊失控。<br />
+这个差别，会直接决定 Agent 是不是像个有脑子的助手。</p>
+<h3 id="3_1">3. 关系衰减预警<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>重要关系并不是突然断掉的，而是缓慢降频。<br />
+系统能从聊天频次和时间间隔里发现这种变化，主动提醒你维护那些你不想丢掉的人。</p>
+<h3 id="4_1">4. 跨对话信息回溯<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>微信原生搜索在这种场景下基本不够用。<br />
+Agent 可以跨所有对话做语义回溯，直接帮你找出“谁在什么时候说过什么”。</p>
+<h3 id="5_1">5. 情绪感知与交互自适应<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
+<p>如果你今天明显很累、回消息很慢、文本很短、几乎没有表情，那系统不该再机械催你做事。<br />
+它应该切换到另一套交互策略。</p>
+<h3 id="6_1">6. 生活轨迹时间轴<a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h3>
+<p>很多人的生活记录做不起来，不是因为不想记，而是因为太麻烦。<br />
+如果聊天本身就能反推出你的行动轨迹，那么时间轴和生活日志就可以自动生成。</p>
+<h3 id="7">7. 自动日记系统<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p>晚上自动总结当天发生了什么、见了谁、情绪有什么波动、哪些承诺还没履行。<br />
+这件事一旦跑通，长期价值会非常高。</p>
+<h3 id="8-iot">8. IoT 联动控制<a class="headerlink" href="#8-iot" title="Permanent link">&para;</a></h3>
+<p>提醒你起床只是初级形态。<br />
+真正的联动是：提醒无效后，Agent 直接去控制窗帘、音乐、灯光等物理环境。</p>
+<h3 id="9_1">9. 社交日程整合<a class="headerlink" href="#9_1" title="Permanent link">&para;</a></h3>
+<p>从聊天中抽取约饭、开会、聚会和临时承诺，自动做冲突检测和提前提醒。<br />
+这比你自己手抄到日历里更接近真实生活。</p>
+<hr />
+<h2 id="bot">为什么这条路线比普通 bot 方案高一个量级<a class="headerlink" href="#bot" title="Permanent link">&para;</a></h2>
+<p>很多现成方案已经能做到“接微信、发微信、跑模型”。<br />
+但真正的差距，不在能不能收发消息，而在<strong>数据视野</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>能力维度</th>
+<th>普通 bot 路线</th>
+<th>这套 WeFlow + ilink + Agent 路线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据来源</td>
+<td>仅 bot 对话</td>
+<td>全部微信聊天</td>
+</tr>
+<tr>
+<td>上下文理解</td>
+<td>只知道你告诉它的事</td>
+<td>知道你的整个社交环境</td>
+</tr>
+<tr>
+<td>时间追踪</td>
+<td>依赖手动汇报</td>
+<td>从聊天行为自动推断</td>
+</tr>
+<tr>
+<td>打断策略</td>
+<td>随机轮询</td>
+<td>基于实时上下文判断</td>
+</tr>
+<tr>
+<td>承诺追踪</td>
+<td>做不到</td>
+<td>可以自动提取</td>
+</tr>
+<tr>
+<td>关系管理</td>
+<td>做不到</td>
+<td>可以建立长期图谱</td>
+</tr>
+<tr>
+<td>信息检索</td>
+<td>只能搜 bot 对话</td>
+<td>能跨所有聊天搜索</td>
+</tr>
+<tr>
+<td>情绪判断</td>
+<td>仅看你发给 bot 的文本</td>
+<td>可结合更完整的行为元数据</td>
+</tr>
+<tr>
+<td>输出能力</td>
+<td>会发消息</td>
+<td>会发消息，也能扩展到报表、前端、IoT</td>
+</tr>
+</tbody>
+</table>
+<p>这就是为什么我认为这不是“又一个微信自动化项目”，而是一条明显更有想象力的个人 Agent 路线。</p>
+<hr />
+<h2 id="_4">这件事最现实的边界<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>这套东西很强，但边界也必须说清楚。</p>
+<h3 id="_5">低风险部分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>ilink</code> 收发消息</li>
+<li>本地 Agent 运行</li>
+<li>本地前端和本地存储</li>
+</ul>
+<p>这些部分本质上都还是个人工作流增强。</p>
+<h3 id="_6">中风险部分<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>WeFlow 读取本地微信数据</li>
+<li>第三方接口和框架的稳定性</li>
+</ul>
+<p>这类风险主要是技术灰度和平台策略变化风险。</p>
+<h3 id="_7">高风险部分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>把这套系统做成公开产品</li>
+<li>处理他人聊天数据并对外提供服务</li>
+<li>商业化部署</li>
+</ul>
+<p>一旦进入产品化和商业化，就不再只是技术问题，而是隐私、合规、平台协议和法律责任问题。</p>
+<p>所以我现在的判断很明确：</p>
+<blockquote>
+<p>自己用，狠狠干；对外做产品，先别在微信上硬刚。</p>
+</blockquote>
+<p>更稳妥的路线是先在自己场景里把逻辑跑通，把能力验证清楚，再考虑把相同的 Agent 决策层迁移到 Telegram、自建 IM 或别的可控环境。</p>
+<hr />
+<h2 id="_8">现在最值得继续补的，不是“再换一个模型”<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>很多人做到这一步会开始纠结：</p>
+<ul>
+<li>Claude 还是 Codex？</li>
+<li>OpenClaw 还是别的 Agent 框架？</li>
+<li>要不要多 Agent？</li>
+</ul>
+<p>这些都重要，但不是当前阶段的第一优先级。</p>
+<p>我认为接下来最值钱的三件事是：</p>
+<ol>
+<li><strong>把承诺提取做成稳定模块</strong></li>
+<li><strong>把关系衰减和时间轴真正落盘</strong></li>
+<li><strong>把输出层做成一个能长期看的本地前端</strong></li>
+</ol>
+<p>因为模型随时可以换，真正难替代的是：</p>
+<ul>
+<li>你自己的数据闭环</li>
+<li>你的行为结构</li>
+<li>你的长期记忆资产</li>
+</ul>
+<p>谁先把这三件事做出来，谁就不是在玩 demo，而是在做个人 Agent 基建。</p>
+<hr />
+<h2 id="_9">最后<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>这个项目让我最兴奋的地方，不是“AI 接了微信”，而是它开始逼近一个更真实的方向：</p>
+<p>Agent 不再只理解你说给它听的话，<br />
+而是开始理解你的人际关系、时间分配、承诺系统和生活惯性。</p>
+<p>这才像一个真正的个人 AI 助手。</p>
+<p>不是聊天玩具。<br />
+不是自动回复脚本。<br />
+而是一套有机会长期陪着你、管理你、提醒你、甚至干预你生活节奏的系统。</p>
+<p>这条路线，我会继续往下打。</p>
+<hr />
+<div class="admonition original">
+<p class="admonition-title">原始来源</p>
+<p>本文整理自本地架构稿 <code>/Users/mac/Desktop/Projects/wechat-agent/wechat-agent-architecture.html</code>，并转写为站内博客版本。</p>
+</div>
 
 
 
@@ -3737,7 +2548,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月7日 11:28:59">2026年4月7日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月8日 16:46:48">2026年4月8日</span>
   </span>
 
     
@@ -3751,10 +2562,10 @@
 
 
 
-                
-              </article>
-            </div>
-          
+      
+    </article>
+  </div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -3778,7 +2589,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../about/roadmap/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 路线图">
+          <a href="../karpathy-knowledge-base/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 一个 Prompt + 工具清单，搭建 Karpathy 本地知识库">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3788,7 +2599,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                路线图
+                一个 Prompt + 工具清单，搭建 Karpathy 本地知识库
               </div>
             </div>
           </a>
@@ -3838,16 +2649,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.footer", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit", "toc.follow", "announce.dismiss"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.footer", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit", "toc.follow", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../assets/javascripts/mathjax.js"></script>
+        <script src="../../assets/javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../assets/javascripts/chat.js"></script>
+        <script src="../../assets/javascripts/chat.js"></script>
       
     
   </body>
