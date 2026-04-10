@@ -17,7 +17,7 @@ tags:
 
 <!-- more -->
 
-{{ card_row(xhs_note("一个命令和工具清单实现Karpathy本地知识库", "https://www.xiaohongshu.com/discovery/item/69d27fe6000000002103823e", 294, 650, "把工具清单和 Prompt 直接复制发给你的 Claude Code / Codex 就能开搭")) }}
+{{ card_row(xhs_note("一个命令和工具清单实现Karpathy本地知识库", "https://www.xiaohongshu.com/discovery/item/69d27fe6000000002103823e", 424, 947, "把工具清单和 Prompt 直接复制发给你的 Claude Code / Codex 就能开搭")) }}
 
 ---
 
