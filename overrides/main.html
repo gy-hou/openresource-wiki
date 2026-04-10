@@ -33,3 +33,29 @@
   <link rel="alternate" type="application/rss+xml" title="Openresource-Wiki" href="{{ config.site_url }}feed_rss_created.xml">
 
 {% endblock %}
+
+{% block footer %}
+  {{ super() }}
+
+  <div id="ai-chat-wrapper" aria-label="AI 聊天助手">
+    <button id="ai-chat-btn" type="button" aria-label="打开 AI 聊天助手" title="AI 聊天助手">
+      {% include ".icons/material/robot-happy-outline.svg" %}
+    </button>
+
+    <div id="ai-chat-panel" role="dialog" aria-modal="false" aria-label="AI 聊天窗口">
+      <div id="ai-chat-header">
+        <span>AI 聊天助手</span>
+        <button id="ai-chat-close" type="button" aria-label="关闭">×</button>
+      </div>
+
+      <div id="ai-chat-messages">
+        <div class="ai-chat-msg ai-chat-assistant">你好！我是 Openresource-Wiki 的智能助手，你可以直接问我站内内容。</div>
+      </div>
+
+      <div id="ai-chat-input-row">
+        <input id="ai-chat-input" type="text" placeholder="输入你的问题..." aria-label="聊天输入">
+        <button id="ai-chat-send" type="button">发送</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}
