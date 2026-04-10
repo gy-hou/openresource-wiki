@@ -9,7 +9,6 @@ use_directory_urls: true
 exclude_docs: |
   _templates/**
   assets/ai/wiki-assistant-index.md
-  assets/ai/academic-assistant-index.md
 
 theme:
   name: material

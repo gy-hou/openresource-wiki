@@ -1,6 +1,6 @@
 /**
  * AI Chat — Cloudflare Worker proxy for DeepSeek API
- * Serves both Openresource-Wiki and academic homepage.
+ * Serves Openresource-Wiki only.
  *
  * Secrets (set via `wrangler secret put`):
  *   DEEPSEEK_API_KEY
@@ -8,7 +8,6 @@
  * Environment vars (in wrangler.toml):
  *   ALLOWED_ORIGINS
  *   WIKI_CONTEXT_URL (optional)
- *   ACADEMIC_CONTEXT_URL (optional)
  */
 
 const WIKI_PROMPT_ZH = `你是 Openresource-Wiki 的智能助手。Openresource-Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
@@ -55,47 +54,11 @@ Rules:
 - If information is unavailable, say so clearly
 - Do not fabricate links, features, or articles`;
 
-const ACADEMIC_PROMPT_EN = `You are the AI assistant for Lucas's academic homepage (gy-hou.github.io).
-
-About Lucas:
-- Student at USTC (University of Science and Technology of China)
-- Research interests: AI, Fintech, LLM applications
-- Projects: TrendR (AI-powered literature review), OpenClaw (AI tool collection), Openresource-Wiki (open-source knowledge sharing)
-- Active on Xiaohongshu (小红书) sharing AI tools & tutorials
-- GitHub: github.com/gy-hou
-- Model backend: DeepSeek Chat API, proxied through Cloudflare Worker
-
-What you can help with:
-- Questions about Lucas's research, projects, and publications
-- Information about the site's content (news, projects, CV, blog)
-- General academic inquiries related to AI and Fintech
-
-Known publications currently listed on the site:
-1) Problems and Countermeasures of Industrial Investment Funds in China's New Economic Phase
-   - Journal: Journal of Regional Financial Research
-   - Year: 2020
-2) Research on the Influencing Factors of Subsidy Thresholds for Government-Guided Venture Capital Funds
-   - Journal: Review of Investment Studies (CSSCI)
-   - Year: 2021
-
-Rules:
-- Reply in English only
-- Be friendly, concise, and professional
-- Don't fabricate publications, grades, or details not on the site
-- Keep answers under 200 words
-- If asked about "your model", explicitly say you use DeepSeek Chat via Cloudflare Worker proxy
-- For detailed inquiries, suggest contacting Lucas directly`;
-
 const MAX_MESSAGES = 10;
 const CONTEXT_CACHE_TTL_MS = 10 * 60 * 1000;
 const MAX_CONTEXT_CHARS = 3200;
 const DEFAULT_WIKI_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/wiki-assistant-index.md";
-const DEFAULT_ACADEMIC_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/academic-assistant-index.md";
-
-const contextCache = {
-  wiki: { fetchedAt: 0, content: "" },
-  academic: { fetchedAt: 0, content: "" },
-};
+const contextCache = { fetchedAt: 0, content: "" };
 
 function safePathnameFromUrl(rawUrl) {
   if (!rawUrl) return "";
@@ -107,37 +70,23 @@ function safePathnameFromUrl(rawUrl) {
   }
 }
 
-function getSiteMode(siteMode, origin, referer) {
+function isLocalDev(origin, referer) {
+  return /(localhost|127\.0\.0\.1)/.test(origin || "") || /(localhost|127\.0\.0\.1)/.test(referer || "");
+}
+
+function isWikiRequest(siteMode, origin, referer) {
   const refererPath = safePathnameFromUrl(referer);
   const fromWikiPath = refererPath === "/openresource-wiki" || refererPath.startsWith("/openresource-wiki/");
-  const fromWikiOrigin = !!(origin && origin.includes("openresource-wiki"));
-  const isLocalDev = /(localhost|127\.0\.0\.1)/.test(origin || "") || /(localhost|127\.0\.0\.1)/.test(referer || "");
-
-  // Production: decide by request origin/path, not by client-provided body flags.
-  if (fromWikiPath || fromWikiOrigin) {
-    return "wiki";
-  }
-
-  // Local dev fallback: allow explicit mode switch for testing.
-  if (isLocalDev && (siteMode === "wiki" || siteMode === "academic")) {
-    return siteMode;
-  }
-
-  return "academic";
+  const fromBody = siteMode === "wiki";
+  return fromWikiPath || (fromBody && !!origin) || isLocalDev(origin, referer);
 }
 
-function getSystemPrompt(siteMode, responseLanguage) {
-  if (siteMode === "wiki") {
-    return responseLanguage === "en" ? WIKI_PROMPT_EN : WIKI_PROMPT_ZH;
-  }
-  return ACADEMIC_PROMPT_EN;
+function getSystemPrompt(responseLanguage) {
+  return responseLanguage === "en" ? WIKI_PROMPT_EN : WIKI_PROMPT_ZH;
 }
 
-function getContextUrl(siteMode, env) {
-  if (siteMode === "wiki") {
-    return env.WIKI_CONTEXT_URL || DEFAULT_WIKI_CONTEXT_URL;
-  }
-  return env.ACADEMIC_CONTEXT_URL || DEFAULT_ACADEMIC_CONTEXT_URL;
+function getContextUrl(env) {
+  return env.WIKI_CONTEXT_URL || DEFAULT_WIKI_CONTEXT_URL;
 }
 
 function sanitizeContext(raw) {
@@ -149,14 +98,14 @@ function sanitizeContext(raw) {
     .slice(0, MAX_CONTEXT_CHARS);
 }
 
-async function loadAssistantContext(siteMode, env) {
-  const cached = contextCache[siteMode];
+async function loadAssistantContext(env) {
+  const cached = contextCache;
   const now = Date.now();
   if (cached && cached.content && now - cached.fetchedAt < CONTEXT_CACHE_TTL_MS) {
     return cached.content;
   }
 
-  const contextUrl = getContextUrl(siteMode, env);
+  const contextUrl = getContextUrl(env);
   if (!contextUrl) {
     return "";
   }
@@ -172,7 +121,8 @@ async function loadAssistantContext(siteMode, env) {
     }
 
     const content = sanitizeContext(await res.text());
-    contextCache[siteMode] = { fetchedAt: now, content };
+    contextCache.fetchedAt = now;
+    contextCache.content = content;
     return content;
   } catch {
     return cached?.content || "";
@@ -235,14 +185,17 @@ export default {
 
       const origin = request.headers.get("Origin") || "";
       const referer = request.headers.get("Referer") || "";
+      if (!isWikiRequest(siteModeFromBody, origin, referer)) {
+        return json({ error: "This endpoint is for Openresource-Wiki only." }, 403, env, request);
+      }
+
       const responseLanguage = getResponseLanguage(body?.response_language, messages);
-      const siteMode = getSiteMode(siteModeFromBody, origin, referer);
       const trimmed = trimAndSanitizeMessages(messages);
-      const basePrompt = getSystemPrompt(siteMode, responseLanguage);
+      const basePrompt = getSystemPrompt(responseLanguage);
       let systemPrompt = basePrompt;
 
       if (shouldAttachContext(trimmed)) {
-        const context = await loadAssistantContext(siteMode, env);
+        const context = await loadAssistantContext(env);
         if (context) {
           systemPrompt = `${basePrompt}\n\n可参考的站内索引（手动维护）:\n${context}`;
         }
