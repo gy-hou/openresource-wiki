@@ -28,8 +28,11 @@ const WIKI_PROMPT_ZH = `你是 Openresource-Wiki 的智能助手。Openresource-
 
 规则：
 - 用中文回答，简洁友好
+- 你是 Openresource-Wiki 助手，不是学术主页助手
+- 模型后端是 DeepSeek Chat，经 Cloudflare Worker 代理
 - 只回答与本站内容相关的问题
 - 如果被问到站点没有的内容，建议访客去对应板块看看或提 Issue
+- 如果被问到“Lucas 具体论文列表 / Google Scholar 引用次数”等本站未明确提供的数据，必须明确说“本站未提供，建议去学术主页或 Google Scholar 查询”
 - 不要编造不存在的文章或功能
 - 回答控制在 200 字以内`;
 
@@ -42,8 +45,11 @@ Site focus:
 
 Rules:
 - Answer in English for this turn
+- You are the assistant for Openresource-Wiki, not the academic homepage assistant
+- Model backend: DeepSeek Chat via Cloudflare Worker proxy
 - Keep the response concise and practical
 - Only answer based on site-related content
+- If asked for Lucas publication list or Google Scholar citation metrics not explicitly available on this wiki, clearly say it is not provided on this site and suggest checking the academic homepage or Google Scholar
 - If information is unavailable, say so clearly
 - Do not fabricate links, features, or articles`;
 
@@ -80,13 +86,30 @@ Rules:
 
 const MAX_MESSAGES = 10;
 
-function getSiteMode(siteMode, origin) {
+function safePathnameFromUrl(rawUrl) {
+  if (!rawUrl) return "";
+  try {
+    const parsed = new URL(rawUrl);
+    return parsed.pathname || "";
+  } catch {
+    return "";
+  }
+}
+
+function getSiteMode(siteMode, origin, referer) {
+  const refererPath = safePathnameFromUrl(referer);
+  const fromWikiPath = refererPath === "/openresource-wiki" || refererPath.startsWith("/openresource-wiki/");
+  const fromWikiOrigin = !!(origin && origin.includes("openresource-wiki"));
+
+  // Headers are more trustworthy than client-provided body flags.
+  if (fromWikiPath || fromWikiOrigin) {
+    return "wiki";
+  }
+
   if (siteMode === "wiki" || siteMode === "academic") {
     return siteMode;
   }
-  if (origin && origin.includes("openresource-wiki")) {
-    return "wiki";
-  }
+
   return "academic";
 }
 
@@ -101,6 +124,29 @@ function trimAndSanitizeMessages(messages) {
   return messages
     .filter((m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
     .slice(-MAX_MESSAGES);
+}
+
+function detectLanguageFromText(text) {
+  if (!text) return "zh";
+  const cjkCount = (text.match(/[\u3400-\u9fff]/g) || []).length;
+  const latinCount = (text.match(/[A-Za-z]/g) || []).length;
+  if (cjkCount > latinCount) return "zh";
+  if (latinCount > 0) return "en";
+  return "zh";
+}
+
+function getResponseLanguage(responseLanguage, messages) {
+  if (responseLanguage === "en" || responseLanguage === "zh") {
+    return responseLanguage;
+  }
+
+  for (let i = messages.length - 1; i >= 0; i--) {
+    if (messages[i]?.role === "user") {
+      return detectLanguageFromText(messages[i].content);
+    }
+  }
+
+  return "zh";
 }
 
 export default {
@@ -118,14 +164,15 @@ export default {
       const body = await request.json();
       const messages = body?.messages;
       const siteModeFromBody = body?.site_mode;
-      const responseLanguage = body?.response_language === "en" ? "en" : "zh";
 
       if (!Array.isArray(messages) || messages.length === 0) {
         return json({ error: "messages required" }, 400, env, request);
       }
 
       const origin = request.headers.get("Origin") || "";
-      const siteMode = getSiteMode(siteModeFromBody, origin);
+      const referer = request.headers.get("Referer") || "";
+      const responseLanguage = getResponseLanguage(body?.response_language, messages);
+      const siteMode = getSiteMode(siteModeFromBody, origin, referer);
       const systemPrompt = getSystemPrompt(siteMode, responseLanguage);
       const trimmed = trimAndSanitizeMessages(messages);
 
@@ -139,7 +186,7 @@ export default {
           model: "deepseek-chat",
           messages: [{ role: "system", content: systemPrompt }, ...trimmed],
           max_tokens: 512,
-          temperature: 0.7,
+          temperature: 0.2,
           stream: false,
         }),
       });
