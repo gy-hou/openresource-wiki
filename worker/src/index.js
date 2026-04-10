@@ -7,6 +7,8 @@
  *
  * Environment vars (in wrangler.toml):
  *   ALLOWED_ORIGINS
+ *   WIKI_CONTEXT_URL (optional)
+ *   ACADEMIC_CONTEXT_URL (optional)
  */
 
 const WIKI_PROMPT_ZH = `你是 Openresource-Wiki 的智能助手。Openresource-Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
@@ -85,6 +87,14 @@ Rules:
 - For detailed inquiries, suggest contacting Lucas directly`;
 
 const MAX_MESSAGES = 10;
+const CONTEXT_CACHE_TTL_MS = 10 * 60 * 1000;
+const MAX_CONTEXT_CHARS = 3200;
+const DEFAULT_WIKI_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/wiki-assistant-index.md";
+
+const contextCache = {
+  wiki: { fetchedAt: 0, content: "" },
+  academic: { fetchedAt: 0, content: "" },
+};
 
 function safePathnameFromUrl(rawUrl) {
   if (!rawUrl) return "";
@@ -118,6 +128,57 @@ function getSystemPrompt(siteMode, responseLanguage) {
     return responseLanguage === "en" ? WIKI_PROMPT_EN : WIKI_PROMPT_ZH;
   }
   return ACADEMIC_PROMPT_EN;
+}
+
+function getContextUrl(siteMode, env) {
+  if (siteMode === "wiki") {
+    return env.WIKI_CONTEXT_URL || DEFAULT_WIKI_CONTEXT_URL;
+  }
+  return env.ACADEMIC_CONTEXT_URL || "";
+}
+
+function sanitizeContext(raw) {
+  if (!raw || typeof raw !== "string") return "";
+  return raw
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/\r/g, "")
+    .trim()
+    .slice(0, MAX_CONTEXT_CHARS);
+}
+
+async function loadAssistantContext(siteMode, env) {
+  const cached = contextCache[siteMode];
+  const now = Date.now();
+  if (cached && cached.content && now - cached.fetchedAt < CONTEXT_CACHE_TTL_MS) {
+    return cached.content;
+  }
+
+  const contextUrl = getContextUrl(siteMode, env);
+  if (!contextUrl) {
+    return "";
+  }
+
+  try {
+    const res = await fetch(contextUrl, {
+      method: "GET",
+      headers: { Accept: "text/markdown,text/plain;q=0.9,*/*;q=0.1" },
+    });
+
+    if (!res.ok) {
+      return cached?.content || "";
+    }
+
+    const content = sanitizeContext(await res.text());
+    contextCache[siteMode] = { fetchedAt: now, content };
+    return content;
+  } catch {
+    return cached?.content || "";
+  }
+}
+
+function shouldAttachContext(messages) {
+  // "New conversation" heuristic: no assistant turns yet.
+  return !messages.some((m) => m?.role === "assistant");
 }
 
 function trimAndSanitizeMessages(messages) {
@@ -173,8 +234,16 @@ export default {
       const referer = request.headers.get("Referer") || "";
       const responseLanguage = getResponseLanguage(body?.response_language, messages);
       const siteMode = getSiteMode(siteModeFromBody, origin, referer);
-      const systemPrompt = getSystemPrompt(siteMode, responseLanguage);
       const trimmed = trimAndSanitizeMessages(messages);
+      const basePrompt = getSystemPrompt(siteMode, responseLanguage);
+      let systemPrompt = basePrompt;
+
+      if (shouldAttachContext(trimmed)) {
+        const context = await loadAssistantContext(siteMode, env);
+        if (context) {
+          systemPrompt = `${basePrompt}\n\n可参考的站内索引（手动维护）:\n${context}`;
+        }
+      }
 
       const res = await fetch("https://api.deepseek.com/chat/completions", {
         method: "POST",

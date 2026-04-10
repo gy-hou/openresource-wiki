@@ -26,6 +26,8 @@ function copyPrompt(btn) {
 document.addEventListener("DOMContentLoaded", function() {
   const WORKER_URL = "https://wiki-ai-chat.hougarry.workers.dev";
   const SITE_MODE = "wiki";
+  const MAX_TURNS_PER_PAGE = 30;
+  const TURN_COUNTER_KEY = `ai_chat_turn_count:${window.location.pathname}`;
   const chatBtn = document.getElementById("ai-chat-btn");
   const chatPanel = document.getElementById("ai-chat-panel");
   const chatClose = document.getElementById("ai-chat-close");
@@ -38,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const messages = [];
   let msgCounter = 0;
   let isSending = false;
+  let turnCount = Number(window.sessionStorage.getItem(TURN_COUNTER_KEY) || 0);
+  if (!Number.isFinite(turnCount) || turnCount < 0) {
+    turnCount = 0;
+  }
 
   chatBtn.onclick = () => {
     chatPanel.classList.toggle("open");
@@ -80,10 +86,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const handleSend = async () => {
     const text = chatInput.value.trim();
     if (!text || isSending) return;
+    if (turnCount >= MAX_TURNS_PER_PAGE) {
+      addMessage(`本页会话次数已达 ${MAX_TURNS_PER_PAGE} 次，请刷新页面后继续。`, false);
+      return;
+    }
 
     isSending = true;
     const responseLanguage = detectUserLanguage(text);
     addMessage(text, true);
+    turnCount += 1;
+    window.sessionStorage.setItem(TURN_COUNTER_KEY, String(turnCount));
     messages.push({ role: "user", content: text });
     chatInput.value = "";
 
