@@ -30,6 +30,16 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+#ai-chat-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+#ai-chat-btn svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+
 #ai-chat-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
