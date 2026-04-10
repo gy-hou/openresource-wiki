@@ -5,3 +5,4 @@ compatibility_date = "2024-01-01"
 [vars]
 ALLOWED_ORIGINS = "https://gy-hou.github.io,https://gy-hou.github.io/openresource-wiki"
 WIKI_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/wiki-assistant-index.md"
+ACADEMIC_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/academic-assistant-index.md"

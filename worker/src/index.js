@@ -90,6 +90,7 @@ const MAX_MESSAGES = 10;
 const CONTEXT_CACHE_TTL_MS = 10 * 60 * 1000;
 const MAX_CONTEXT_CHARS = 3200;
 const DEFAULT_WIKI_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/wiki-assistant-index.md";
+const DEFAULT_ACADEMIC_CONTEXT_URL = "https://raw.githubusercontent.com/gy-hou/openresource-wiki/main/docs/assets/ai/academic-assistant-index.md";
 
 const contextCache = {
   wiki: { fetchedAt: 0, content: "" },
@@ -134,7 +135,7 @@ function getContextUrl(siteMode, env) {
   if (siteMode === "wiki") {
     return env.WIKI_CONTEXT_URL || DEFAULT_WIKI_CONTEXT_URL;
   }
-  return env.ACADEMIC_CONTEXT_URL || "";
+  return env.ACADEMIC_CONTEXT_URL || DEFAULT_ACADEMIC_CONTEXT_URL;
 }
 
 function sanitizeContext(raw) {
