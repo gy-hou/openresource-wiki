@@ -9,7 +9,7 @@
  *   ALLOWED_ORIGINS
  */
 
-const WIKI_PROMPT = `你是 Openresource-Wiki 的智能助手。Openresource-Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
+const WIKI_PROMPT_ZH = `你是 Openresource-Wiki 的智能助手。Openresource-Wiki 是一个开源知识分享站，由 Lucas（USTC，专注 AI 工具测评 / Fintech）维护。
 
 站点板块：
 - 博客：小红书热帖文字版、AI 热点解读、实操教程
@@ -33,7 +33,21 @@ const WIKI_PROMPT = `你是 Openresource-Wiki 的智能助手。Openresource-Wik
 - 不要编造不存在的文章或功能
 - 回答控制在 200 字以内`;
 
-const ACADEMIC_PROMPT = `You are the AI assistant for Lucas's academic homepage (gy-hou.github.io).
+const WIKI_PROMPT_EN = `You are the AI assistant for Openresource-Wiki.
+
+Site focus:
+- Practical AI tools, prompt engineering, and agent workflows
+- Tutorials and project write-ups (TrendR, OpenClaw, Openresource-Wiki)
+- Prompt/Skill libraries and tool comparisons
+
+Rules:
+- Answer in English for this turn
+- Keep the response concise and practical
+- Only answer based on site-related content
+- If information is unavailable, say so clearly
+- Do not fabricate links, features, or articles`;
+
+const ACADEMIC_PROMPT_EN = `You are the AI assistant for Lucas's academic homepage (gy-hou.github.io).
 
 About Lucas:
 - Student at USTC (University of Science and Technology of China)
@@ -48,7 +62,7 @@ What you can help with:
 - General academic inquiries related to AI and Fintech
 
 Rules:
-- Reply in the same language as the user's question (English or Chinese)
+- Reply in English only
 - Be friendly, concise, and professional
 - Don't fabricate publications, grades, or details not on the site
 - Keep answers under 200 words
@@ -56,11 +70,27 @@ Rules:
 
 const MAX_MESSAGES = 10;
 
-function getSystemPrompt(origin) {
-  if (origin && origin.includes("openresource-wiki")) {
-    return WIKI_PROMPT;
+function getSiteMode(siteMode, origin) {
+  if (siteMode === "wiki" || siteMode === "academic") {
+    return siteMode;
   }
-  return ACADEMIC_PROMPT;
+  if (origin && origin.includes("openresource-wiki")) {
+    return "wiki";
+  }
+  return "academic";
+}
+
+function getSystemPrompt(siteMode, responseLanguage) {
+  if (siteMode === "wiki") {
+    return responseLanguage === "en" ? WIKI_PROMPT_EN : WIKI_PROMPT_ZH;
+  }
+  return ACADEMIC_PROMPT_EN;
+}
+
+function trimAndSanitizeMessages(messages) {
+  return messages
+    .filter((m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
+    .slice(-MAX_MESSAGES);
 }
 
 export default {
@@ -75,16 +105,19 @@ export default {
     }
 
     try {
-      const { messages } = await request.json();
+      const body = await request.json();
+      const messages = body?.messages;
+      const siteModeFromBody = body?.site_mode;
+      const responseLanguage = body?.response_language === "en" ? "en" : "zh";
 
       if (!Array.isArray(messages) || messages.length === 0) {
         return json({ error: "messages required" }, 400, env, request);
       }
 
-      // Limit conversation length
-      const trimmed = messages.slice(-MAX_MESSAGES);
       const origin = request.headers.get("Origin") || "";
-      const systemPrompt = getSystemPrompt(origin);
+      const siteMode = getSiteMode(siteModeFromBody, origin);
+      const systemPrompt = getSystemPrompt(siteMode, responseLanguage);
+      const trimmed = trimAndSanitizeMessages(messages);
 
       const res = await fetch("https://api.deepseek.com/chat/completions", {
         method: "POST",

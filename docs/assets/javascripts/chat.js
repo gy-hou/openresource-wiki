@@ -25,6 +25,7 @@ function copyPrompt(btn) {
 
 document.addEventListener("DOMContentLoaded", function() {
   const WORKER_URL = "https://wiki-ai-chat.hougarry.workers.dev";
+  const SITE_MODE = "wiki";
   const chatBtn = document.getElementById("ai-chat-btn");
   const chatPanel = document.getElementById("ai-chat-panel");
   const chatClose = document.getElementById("ai-chat-close");
@@ -64,6 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (node) node.remove();
   };
 
+  const detectUserLanguage = (text) => {
+    const cjkCount = (text.match(/[\u3400-\u9fff]/g) || []).length;
+    const latinCount = (text.match(/[A-Za-z]/g) || []).length;
+    if (cjkCount > latinCount) return "zh";
+    if (latinCount > 0) return "en";
+    return "zh";
+  };
+
   const isModelQuestion = (text) => {
     return /你.*什么模型|是什么模型|模型是什么|what model/i.test(text);
   };
@@ -73,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!text || isSending) return;
 
     isSending = true;
+    const responseLanguage = detectUserLanguage(text);
     addMessage(text, true);
     messages.push({ role: "user", content: text });
     chatInput.value = "";
@@ -83,7 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
       const res = await fetch(WORKER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages }),
+        body: JSON.stringify({
+          site_mode: SITE_MODE,
+          response_language: responseLanguage,
+          messages,
+        }),
       });
 
       const data = await res.json().catch(() => ({}));
