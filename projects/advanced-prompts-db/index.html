@@ -1708,6 +1708,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      代表 Prompt（节选）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       技术栈
@@ -1972,6 +1981,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      代表 Prompt（节选）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       技术栈
@@ -2057,6 +2075,7 @@
 <blockquote>
 <p>ChatGPT 高级 Prompt 数据库，一键 Vercel 部署</p>
 </blockquote>
+<p><img alt="Advanced Prompts DB Hero" class="project-hero" src="../../assets/images/projects/advanced-prompts-db.svg" /></p>
 <h2 id="_1">要解决的问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>优质的 ChatGPT Prompt 散落在各个论坛和文档中，缺少一个结构化、可搜索、可自部署的 Prompt 集合。</p>
 <h2 id="_2">做了什么<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -2066,29 +2085,42 @@
 <li>支持搜索、分类浏览</li>
 <li>提供了中英文双语内容</li>
 </ul>
+<h2 id="prompt">代表 Prompt（节选）<a class="headerlink" href="#prompt" title="Permanent link">&para;</a></h2>
+<div class="prompt-block-enhanced">
+  <div class="prompt-header">
+    <div class="prompt-tag">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Prompt Builder
+    </div>
+    <div class="prompt-copy-btn" onclick="copyPrompt(this)" title="复制提示词">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2z"/><path d="M16 18v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2"/></svg>
+    </div>
+  </div>
+  <div class="prompt-content">你是一名资深提示工程师。请将用户目标拆分为：任务定义、输入约束、输出结构、评估标准，并返回可直接执行的高质量 Prompt。</div>
+</div>
+
+<div class="prompt-block-enhanced">
+  <div class="prompt-header">
+    <div class="prompt-tag">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Code Review Pro
+    </div>
+    <div class="prompt-copy-btn" onclick="copyPrompt(this)" title="复制提示词">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2z"/><path d="M16 18v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2"/></svg>
+    </div>
+  </div>
+  <div class="prompt-content">请基于下面代码做严格代码审查，输出：阻断问题、兼容性风险、性能风险、可维护性建议，并给出最小可行修复方案。</div>
+</div>
+
 <h2 id="_3">技术栈<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>层级</th>
-<th>技术</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>前端</td>
-<td>JavaScript</td>
-</tr>
-<tr>
-<td>部署</td>
-<td>Vercel</td>
-</tr>
-<tr>
-<td>数据</td>
-<td>JSON / Markdown</td>
-</tr>
-</tbody>
-</table>
+<div class="md-tags">
+  <span class="md-tag">JavaScript</span>
+  <span class="md-tag">Vercel</span>
+  <span class="md-tag">JSON</span>
+  <span class="md-tag">Markdown</span>
+  <span class="md-tag">Prompt Engineering</span>
+</div>
+
 <h2 id="_4">当前进度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2146,7 +2178,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月8日 09:52:07">2026年4月8日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月10日 16:23:28">2026年4月10日</span>
   </span>
 
     

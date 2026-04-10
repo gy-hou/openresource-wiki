@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Advanced Prompts DB hero">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#g4)" rx="24"/>
+  <g opacity="0.85">
+    <rect x="790" y="88" width="270" height="92" rx="18" fill="#ef4444"/>
+    <rect x="730" y="188" width="340" height="100" rx="18" fill="#f97316"/>
+    <rect x="815" y="300" width="220" height="60" rx="14" fill="#fb7185"/>
+  </g>
+  <text x="84" y="168" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">Advanced Prompts DB</text>
+  <text x="84" y="214" fill="#fee2e2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">High-Quality Prompt Library with One-Click Deployment</text>
+  <text x="84" y="352" fill="#fdba74" font-family="JetBrains Mono, Menlo, monospace" font-size="20">JavaScript   Vercel   Search   Prompt Curation</text>
+</svg>

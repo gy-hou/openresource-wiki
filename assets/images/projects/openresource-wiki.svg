@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Openresource-Wiki hero">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#g3)" rx="24"/>
+  <g stroke="#93c5fd" stroke-width="2" opacity="0.45" fill="none">
+    <circle cx="910" cy="196" r="96"/>
+    <ellipse cx="910" cy="196" rx="42" ry="96"/>
+    <ellipse cx="910" cy="196" rx="96" ry="40"/>
+  </g>
+  <g fill="#e0f2fe" opacity="0.85">
+    <circle cx="910" cy="100" r="7"/>
+    <circle cx="1006" cy="196" r="7"/>
+    <circle cx="910" cy="292" r="7"/>
+    <circle cx="814" cy="196" r="7"/>
+  </g>
+  <text x="84" y="168" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">Openresource-Wiki</text>
+  <text x="84" y="214" fill="#dbeafe" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">Open Knowledge Base for AI Tools, Prompts and Skills</text>
+  <text x="84" y="352" fill="#93c5fd" font-family="JetBrains Mono, Menlo, monospace" font-size="20">MkDocs   Jinja2   GitHub Pages   Actions</text>
+</svg>
