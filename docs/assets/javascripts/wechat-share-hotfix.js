@@ -2,6 +2,13 @@
  * Copy current page URL to clipboard when user clicks "发送给朋友".
  */
 (function () {
+  function disableFooterHoverTooltip() {
+    var links = document.querySelectorAll(".md-footer__link[aria-label]");
+    links.forEach(function (link) {
+      link.removeAttribute("aria-label");
+    });
+  }
+
   function fallbackCopy(text) {
     var textarea = document.createElement("textarea");
     textarea.value = text;
@@ -49,6 +56,12 @@
         return false;
       });
   };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", disableFooterHoverTooltip);
+  } else {
+    disableFooterHoverTooltip();
+  }
 
   // Keep single trigger path to avoid duplicate alerts:
   // button uses inline onclick="return shareToWechat(event);"
