@@ -15,7 +15,7 @@
                 <a href="{{ page.parent.url | url }}" class="md-nav__link">
                   {% include ".icons/material/arrow-left.svg" %}
                   <span class="md-ellipsis">
-                    {{ lang.t("blog.index") }}
+                    文章总览
                   </span>
                 </a>
               </div>
@@ -59,7 +59,7 @@
                         </time>
                       </div>
                     </li>
-                    {% if page.config.date.updated %}
+                    {% if page.config.date.updated and page.config.date.updated != page.config.date.created %}
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           {% include ".icons/material/calendar-clock.svg" %}
@@ -137,19 +137,19 @@
 
       <!-- 社交分享组件 -->
       <div class="blog-share">
-        <div class="blog-share-title">分享这篇硬核干货</div>
+        <div class="blog-share-title">分享这篇内容</div>
         <div class="blog-share-buttons">
           <a href="#" onclick="return shareToWechat(event);" class="share-btn share-btn--wechat" title="微信分享">
             {% include ".icons/fontawesome/brands/weixin.svg" %}
-            <span>发送给朋友</span>
+            <span>微信</span>
           </a>
-          <a href="https://www.xiaohongshu.com/user/profile/你的ID" target="_blank" class="share-btn share-btn--xhs">
+          <a href="https://xhslink.com/m/3lRU7a53RSt" target="_blank" rel="noopener" class="share-btn share-btn--xhs">
             {% include ".icons/simple/xiaohongshu.svg" %}
-            <span>小红书点赞</span>
+            <span>小红书</span>
           </a>
-          <a href="{{ config.repo_url }}" target="_blank" class="share-btn share-btn--github">
+          <a href="{{ config.repo_url }}" target="_blank" rel="noopener" class="share-btn share-btn--github">
             {% include ".icons/fontawesome/brands/github.svg" %}
-            <span>GitHub Star</span>
+            <span>GitHub</span>
           </a>
         </div>
       </div>

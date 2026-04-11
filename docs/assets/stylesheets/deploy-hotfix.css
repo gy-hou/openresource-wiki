@@ -1,43 +1,11 @@
 /* Deploy hotfix:
- * Keep key UI changes visible even if extra.css is cached by the browser/CDN.
+ * Keep critical visual patches stable even when extra.css is cached.
  */
 
-/* Blog list CTA: continue reading */
-.md-post .md-post__action a {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.32rem 0.92rem;
-  margin-top: 0.3rem;
-  border: 1px solid var(--wiki-accent-strong);
-  border-radius: 7px;
-  background: var(--wiki-accent);
-  color: #fff !important;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-decoration: none !important;
-  box-shadow: 0 2px 10px rgba(40, 53, 147, 0.18);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
-}
-
-.md-post .md-post__action a:hover {
-  transform: translateY(-1px);
-  background: var(--wiki-accent-strong);
-  border-color: var(--wiki-accent-strong);
-  box-shadow: 0 4px 12px rgba(40, 53, 147, 0.25);
-}
-
-.md-post .md-post__action a::before {
-  content: "» ";
-}
-
-[data-md-color-scheme="slate"] .md-post .md-post__action a {
-  border-color: rgba(197, 202, 233, 0.5);
-}
-
-/* Blog detail share block + icon sizing */
+/* Blog share block fallback */
 .blog-share {
-  margin: 3rem 0 2rem;
-  padding: 1.5rem;
+  margin: 2.4rem 0 1.8rem;
+  padding: 1.2rem;
   border-top: 1px solid var(--wiki-card-border);
   text-align: center;
 }
@@ -45,17 +13,17 @@
 .blog-share-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
 .blog-share .share-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.2rem;
+  gap: 0.45rem;
+  padding: 0.46rem 1rem;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   line-height: 1;
   text-decoration: none !important;
@@ -63,10 +31,10 @@
 }
 
 .blog-share .share-btn svg {
-  width: 1.1rem !important;
-  height: 1.1rem !important;
-  min-width: 1.1rem;
-  min-height: 1.1rem;
+  width: 1.02rem !important;
+  height: 1.02rem !important;
+  min-width: 1.02rem;
+  min-height: 1.02rem;
   fill: currentColor;
 }
 

@@ -1,7 +1,7 @@
-site_name: "Openresource-Wiki"
+site_name: "OpenResource Wiki"
 site_url: https://gy-hou.github.io/openresource-wiki/
 site_author: gy-hou
-site_description: "AI 工具、Prompts、Skills 开源分享 | 小红书同名博主"
+site_description: "一个持续更新的 AI、智能体、研究工具与项目实践知识库"
 repo_url: https://github.com/gy-hou/openresource-wiki
 edit_uri: edit/main/docs/
 use_directory_urls: true
@@ -44,9 +44,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
-  font:
-    text: Noto Sans SC
-    code: JetBrains Mono
+  font: false
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
@@ -149,47 +147,51 @@ extra_javascript:
   - assets/javascripts/prompt-copy-hotfix.js
   - assets/javascripts/wechat-share-hotfix.js
 
-copyright: Copyright &copy; 2025-2026 gy-hou | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+copyright: 版权所有 &copy; 2025-2026 gy-hou | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 
 nav:
   - 首页: index.md
-  - 博客:
-    - blog/index.md
+  - 文章:
+    - 文章总览: blog/index.md
   - 工具库:
-    - toolbox/index.md
-    - Prompts:
-      - prompts/index.md
-      - ⭐ CC 工程化工作流: prompts/coding/claude-code-workflow.md
-      - ⭐ 技术博客写作: prompts/writing/tech-blog-writer.md
-      - ⭐ LLM 知识库管理: prompts/research/knowledge-base-manager.md
-      - 代码审查: prompts/coding/code-review-prompt.md
-      - 小红书写作: prompts/writing/xiaohongshu-writer.md
-      - 论文精读: prompts/research/paper-reader.md
-      - System Prompt 模板: prompts/system/ai-assistant-system.md
-    - Skills:
-      - skills/index.md
-      - ⭐ 小红书卡片生成器: skills/templates/xhs-card-generator.md
-      - ⭐ 标签自动提取: skills/templates/auto-tag-extractor.md
-      - ⭐ Chrome CDP 调试: skills/templates/chrome-cdp-setup.md
-      - LLM Wiki Agent: skills/templates/llm-wiki-agent.md
+    - 工具库总览: toolbox/index.md
+    - 提示词库:
+      - 提示词库总览: prompts/index.md
+      - 科研:
+        - 论文精读: prompts/research/paper-reader.md
+        - 知识库管理: prompts/research/knowledge-base-manager.md
+      - 工作:
+        - CC 工程化工作流: prompts/work/claude-code-workflow.md
+        - 代码审查: prompts/work/code-review-prompt.md
+        - 验收 Skill 模板: prompts/work/Verifier-skill.md
+      - 学习:
+        - 技术博客写作: prompts/study/tech-blog-writer.md
+        - 通用 AI 助手: prompts/study/ai-assistant-system.md
+      - 生活:
+        - 小红书写作: prompts/life/xiaohongshu-writer.md
+    - 技能库:
+      - 技能库总览: skills/index.md
+      - 推荐：小红书卡片生成器: skills/templates/xhs-card-generator.md
+      - 推荐：标签自动提取: skills/templates/auto-tag-extractor.md
+      - 推荐：Chrome CDP 调试: skills/templates/chrome-cdp-setup.md
+      - wiki 智能体模板: skills/templates/llm-wiki-agent.md
     - AI 平台:
-      - toolbox/ai-platforms/index.md
+      - AI 平台总览: toolbox/ai-platforms/index.md
       - 主流 AI 模型实测对比: toolbox/ai-platforms/model-comparison.md
     - 开发工具:
-      - toolbox/dev-tools/index.md
+      - 开发工具总览: toolbox/dev-tools/index.md
       - AI 编程工具全景图: toolbox/dev-tools/ai-coding-tools.md
     - 工作流:
-      - toolbox/workflows/index.md
-      - 搭建个人 Wiki 的工具清单: toolbox/workflows/wiki-setup-tools.md
+      - 工作流总览: toolbox/workflows/index.md
+      - 搭建个人 wiki 的工具清单: toolbox/workflows/wiki-setup-tools.md
   - 项目:
-    - projects/index.md
+    - 项目总览: projects/index.md
     - TrendR: projects/trendr.md
     - OpenClaw: projects/openclaw.md
-    - Openresource-Wiki: projects/openresource-wiki.md
+    - OpenResource Wiki: projects/openresource-wiki.md
     - Advanced Prompts DB: projects/advanced-prompts-db.md
-  - Ideas:
-    - ideas/index.md
+  - 想法:
+    - 想法总览: ideas/index.md
   - 关于:
-    - about/index.md
+    - 关于本站: about/index.md
     - 路线图: about/roadmap.md
-  - 标签: tags.md

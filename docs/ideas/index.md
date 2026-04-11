@@ -1,11 +1,17 @@
 ---
-title: "Ideas"
+title: "想法"
 hide_title: true
 hide:
   - toc
 ---
 
-想法不值钱，但不记录下来连不值钱的机会都没有。点击展开阅读。
+<div class="section-page">
+  <header class="section-hero">
+    <p class="section-kicker">想法栏目</p>
+    <p class="section-lead">记录尚未定稿但值得跟踪的观察、假设与实验方向，优先保留问题意识与可验证路径。</p>
+    <p class="section-guide">导览：按主题展开阅读；每条想法都可继续转化为文章或项目任务。</p>
+  </header>
+</div>
 
 === "科技"
 
@@ -247,4 +253,9 @@ hide:
 
         把分散在小红书、聊天记录、笔记里的内容结构化，开源出来。如果一年后回看这个项目有持续更新，说明这个模式 work。
 
-*有想讨论的 idea？欢迎提 [Issue](https://github.com/gy-hou/openresource-wiki/issues)。*
+*有想讨论的想法，欢迎提 [Issue](https://github.com/gy-hou/openresource-wiki/issues)。*
+
+<nav class="section-nav-row" aria-label="想法页辅助导航">
+  <a class="section-nav-link" href="../">返回首页</a>
+  <a class="section-nav-link" href="../projects/">查看项目</a>
+</nav>

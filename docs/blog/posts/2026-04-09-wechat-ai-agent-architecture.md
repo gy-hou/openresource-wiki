@@ -302,5 +302,5 @@ Agent 不再只是理解你告诉它的话，
 
 ---
 
-!!! original "原始来源"
-    本文整理自本地架构稿 `/Users/mac/Desktop/Projects/wechat-agent/wechat-agent-architecture.html`，改写为站内博客版本。
+!!! original "作者笔记"
+    本文改写为站内博客版本，内容基于作者的项目实践整理。

@@ -5,7 +5,7 @@ tags:
   - Agent
 ---
 
-# OpenClaw
+# OpenClaw 自动化浏览器
 
 > 开源 AI 工具集 — 多 Agent 编排 + 可复用工作流模块
 
@@ -13,7 +13,7 @@ tags:
 
 ## 要解决的问题
 
-现有 AI 编程工具（Claude Code、Cursor 等）各自为政，工作流、Skills、浏览器自动化等能力无法跨工具复用。需要一个统一的开源框架来编排多 Agent 工作流。
+现有 AI 编程工具（Claude Code、Cursor 等）各自为政，工作流、技能模板、浏览器自动化等能力无法跨工具复用。需要一个统一的开源框架来编排多 Agent 工作流。
 
 ## 做了什么
 
@@ -55,3 +55,18 @@ tags:
 - [ ] 支持更多 AI 工具的 Skill 格式适配
 - [ ] 完善 Agent 编排 DSL
 - [ ] Windows / Linux 平台适配
+
+<div class="blog-share">
+  <div class="blog-share-title">分享这个项目</div>
+  <div class="blog-share-buttons">
+    <a href="#" onclick="return shareToWechat(event);" class="share-btn share-btn--wechat" title="微信分享">
+      微信
+    </a>
+    <a href="https://xhslink.com/m/3lRU7a53RSt" target="_blank" rel="noopener" class="share-btn share-btn--xhs" title="小红书">
+      小红书
+    </a>
+    <a href="https://github.com/gy-hou/openresource-wiki" target="_blank" rel="noopener" class="share-btn share-btn--github" title="GitHub">
+      GitHub
+    </a>
+  </div>
+</div>

@@ -26,7 +26,7 @@ hide:
 
 - **RL Trading Agent** — PPO + Actor-Critic，MLP/Transformer 消融实验
 - **TrendR** — 开源 AI 助手系统（本地 Agent + QMD + Scrapling）
-- **Openresource-Wiki** — 你正在看的这个站点
+- **OpenResource Wiki** — 你正在看的这个站点
 
 ## 📱 找到我
 
@@ -48,7 +48,7 @@ hide:
 我的在线内容分为两个站点：
 
 - **[学术主页](https://gy-hou.github.io)** — 研究身份、论文发表、正式学术内容
-- **[Openresource-Wiki](https://gy-hou.github.io/openresource-wiki/)** — Builder 身份、AI 工具测评、Prompt/Skills、实验性项目、技术笔记
+- **[OpenResource Wiki](https://gy-hou.github.io/openresource-wiki/)** — Builder 身份、AI 工具测评、提示词与技能模板、实验性项目、技术笔记
 
 ## 💬 反馈
 

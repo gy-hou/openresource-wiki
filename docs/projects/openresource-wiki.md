@@ -5,11 +5,11 @@ tags:
   - MkDocs
 ---
 
-# Openresource-Wiki
+# OpenResource Wiki
 
-> 你正在看的这个站点 — AI 工具、Prompts、Skills 的开源分享站
+> 你正在看的这个站点 — AI 工具、提示词库与技能库的开源知识站
 
-![Openresource-Wiki Hero](../assets/images/projects/openresource-wiki.svg){ .project-hero }
+![OpenResource Wiki Hero](../assets/images/projects/openresource-wiki.svg){ .project-hero }
 
 ## 要解决的问题
 
@@ -19,7 +19,7 @@ tags:
 
 - 搭建了基于 MkDocs Material 的完整 Wiki 站点
 - 实现了博客系统（RSS、归档、分类、标签）
-- 建立了 Prompt 库和 Skills 库，所有内容可搜索、可复制
+- 建立了提示词库和技能库，所有内容可搜索、可复制
 - 集成了 AI 聊天助手（Cloudflare Worker + Claude API）
 - 自动化 SEO（Open Graph、Twitter Card、RSS）
 - 支持深色模式、移动端适配
@@ -42,11 +42,11 @@ tags:
 | 模块 | 状态 |
 |------|------|
 | 博客系统 | 🟢 运行中 |
-| Prompt 库 | 🟢 7+ prompts |
-| Skills 库 | 🟢 4+ skills |
-| 工具箱 | 🟢 可用 |
+| 提示词库 | 🟢 7+ prompts |
+| 技能库 | 🟢 4+ skills |
+| 工具库 | 🟢 可用 |
 | AI 聊天助手 | 🟢 可用 |
-| Newsletter | 🟢 Buttondown 集成 |
+| 邮箱订阅 | 🟢 Buttondown 集成 |
 | 评论系统 | 🔴 待接入 |
 
 ## Repo
@@ -56,6 +56,21 @@ tags:
 ## 下一步
 
 - [ ] 接入评论系统（GitHub Discussions / Giscus）
-- [ ] 增加更多原创 Prompts 和 Skills
+- [ ] 增加更多原创提示词与技能模板
 - [ ] 国际化（英文版）
 - [ ] 访问统计（Google Analytics / Umami）
+
+<div class="blog-share">
+  <div class="blog-share-title">分享这个项目</div>
+  <div class="blog-share-buttons">
+    <a href="#" onclick="return shareToWechat(event);" class="share-btn share-btn--wechat" title="微信分享">
+      微信
+    </a>
+    <a href="https://xhslink.com/m/3lRU7a53RSt" target="_blank" rel="noopener" class="share-btn share-btn--xhs" title="小红书">
+      小红书
+    </a>
+    <a href="https://github.com/gy-hou/openresource-wiki" target="_blank" rel="noopener" class="share-btn share-btn--github" title="GitHub">
+      GitHub
+    </a>
+  </div>
+</div>

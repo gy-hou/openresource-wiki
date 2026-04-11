@@ -2,22 +2,28 @@
 
 {% block extrahead %}
   {{ super() }}
+
+  <!-- Typography: Inter (sans) + JetBrains Mono (mono) — Latin subset only, system fallback for CJK -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   {% set page_title = (page.meta.title if page and page.meta and page.meta.title else (page.title if page and page.title else config.site_name)) %}
   {% set page_description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
   {% set page_url = (page.canonical_url if page and page.canonical_url else config.site_url) %}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ page_title }} - Openresource-Wiki">
+  <meta property="og:title" content="{{ page_title }} - OpenResource Wiki">
   <meta property="og:description" content="{{ page_description }}">
   <meta property="og:url" content="{{ page_url }}">
-  <meta property="og:site_name" content="Openresource-Wiki">
+  <meta property="og:site_name" content="OpenResource Wiki">
   <meta property="og:image" content="{{ config.site_url }}assets/images/og-default.png">
   <meta property="og:locale" content="zh_CN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page_title }} - Openresource-Wiki">
+  <meta name="twitter:title" content="{{ page_title }} - OpenResource Wiki">
   <meta name="twitter:description" content="{{ page_description }}">
   <meta name="twitter:image" content="{{ config.site_url }}assets/images/og-default.png">
 
@@ -30,30 +36,28 @@
   {% endif %}
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Openresource-Wiki" href="{{ config.site_url }}feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="OpenResource Wiki" href="{{ config.site_url }}feed_rss_created.xml">
 
 {% endblock %}
 
 {% block footer %}
   {{ super() }}
 
-  <div id="ai-chat-wrapper" aria-label="AI 聊天助手">
-    <button id="ai-chat-btn" type="button" aria-label="打开 AI 聊天助手" title="AI 聊天助手">
+  <div id="ai-chat-wrapper" aria-label="站内 AI 助手">
+    <button id="ai-chat-btn" type="button" aria-label="打开站内 AI 助手" title="站内 AI 助手">
       {% include ".icons/material/robot-happy-outline.svg" %}
     </button>
 
-    <div id="ai-chat-panel" role="dialog" aria-modal="false" aria-label="AI 聊天窗口">
+    <div id="ai-chat-panel" role="dialog" aria-modal="false" aria-label="站内 AI 聊天窗口">
       <div id="ai-chat-header">
-        <span>AI 聊天助手</span>
+        <span>站内 AI 助手</span>
         <button id="ai-chat-close" type="button" aria-label="关闭">×</button>
       </div>
 
-      <div id="ai-chat-messages">
-        <div class="ai-chat-msg ai-chat-assistant">你好！我是 Openresource-Wiki 的智能助手，你可以直接问我站内内容。</div>
-      </div>
+      <div id="ai-chat-messages" aria-live="polite"></div>
 
       <div id="ai-chat-input-row">
-        <input id="ai-chat-input" type="text" placeholder="输入你的问题..." aria-label="聊天输入">
+        <input id="ai-chat-input" type="text" placeholder="输入站内问题..." aria-label="聊天输入">
         <button id="ai-chat-send" type="button">发送</button>
       </div>
     </div>

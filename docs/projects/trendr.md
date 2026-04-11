@@ -55,3 +55,18 @@ tags:
 - [ ] 接入更多数据源（arXiv, Semantic Scholar）
 - [ ] 搭建 Web Dashboard 可视化趋势
 - [ ] 开源核心模块
+
+<div class="blog-share">
+  <div class="blog-share-title">分享这个项目</div>
+  <div class="blog-share-buttons">
+    <a href="#" onclick="return shareToWechat(event);" class="share-btn share-btn--wechat" title="微信分享">
+      微信
+    </a>
+    <a href="https://xhslink.com/m/3lRU7a53RSt" target="_blank" rel="noopener" class="share-btn share-btn--xhs" title="小红书">
+      小红书
+    </a>
+    <a href="https://github.com/gy-hou/openresource-wiki" target="_blank" rel="noopener" class="share-btn share-btn--github" title="GitHub">
+      GitHub
+    </a>
+  </div>
+</div>

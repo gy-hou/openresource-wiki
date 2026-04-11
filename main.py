@@ -122,7 +122,31 @@ def define_env(env):
                     f'<a class="featured-card featured-card--{color}" href="{url}">'
                     f'<div class="featured-card-title">{title}</div></a>'
                 )
-        return '<div class="featured-carousel">\n' + "\n".join(cards) + "\n</div>"
+        script = (
+            '<script>'
+            'document.addEventListener("DOMContentLoaded",function(){'
+            'document.querySelectorAll(".featured-wrapper").forEach(function(w){'
+            'var c=w.querySelector(".featured-carousel");'
+            'var prev=w.querySelector(".featured-nav--prev");'
+            'var next=w.querySelector(".featured-nav--next");'
+            'if(!c||!prev||!next)return;'
+            'function step(){var card=c.querySelector(".featured-card");'
+            'return card?card.offsetWidth+16:300}'
+            'prev.addEventListener("click",function(){c.scrollBy({left:-step(),behavior:"smooth"})});'
+            'next.addEventListener("click",function(){c.scrollBy({left:step(),behavior:"smooth"})});'
+            '})});'
+            '</script>'
+        )
+        return (
+            '<div class="featured-wrapper">\n'
+            '<button class="featured-nav featured-nav--prev" aria-label="上一组" type="button">&#8249;</button>\n'
+            '<div class="featured-carousel">\n'
+            + "\n".join(cards)
+            + '\n</div>\n'
+            '<button class="featured-nav featured-nav--next" aria-label="下一组" type="button">&#8250;</button>\n'
+            '</div>\n'
+            + script
+        )
 
     @env.macro
     def blog_cover(slug):
