@@ -2,226 +2,230 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/404/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/tags/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/about/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/about/roadmap/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/openclaw-harness-engineering/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/openclaw-tulip-bubble/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/claude-code-memory-analysis/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/2026-%E5%B9%B4-ai-%E6%A8%A1%E5%9E%8B%E6%A0%BC%E5%B1%80%E8%B0%81%E5%9C%A8%E9%A2%86%E8%B7%91/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/karpathy-ai-auto-research-trendr/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/openclaw-advanced/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/claude-code-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/deepseek-api-%E5%AE%8C%E5%85%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/karpathy-knowledge-base/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/wechat-ai-agent-architecture/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/one-command-stop-openclaw-fake-work/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gy-hou.github.io/openresource-wiki/blog/manus-chilling-effect/</loc>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/ideas/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/projects/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/projects/advanced-prompts-db/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/projects/openclaw/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/projects/openresource-wiki/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/projects/trendr/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/life/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/life/xiaohongshu-writer/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/other/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/research/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/research/knowledge-base-manager/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/research/paper-reader/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/study/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/study/ai-assistant-system/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/study/tech-blog-writer/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/work/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/work/Verifier-skill/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/work/claude-code-workflow/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/prompts/work/code-review-prompt/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/templates/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/templates/auto-tag-extractor/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/templates/chrome-cdp-setup/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/templates/llm-wiki-agent/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/skills/templates/xhs-card-generator/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/ai-platforms/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/ai-platforms/model-comparison/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/dev-tools/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/dev-tools/ai-coding-tools/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/workflows/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/toolbox/workflows/wiki-setup-tools/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/archive/2026/</loc>
-         <lastmod>2026-04-11</lastmod>
-    </url>
-    <url>
-         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/ai-%E5%B7%A5%E7%A8%8B/</loc>
-         <lastmod>2026-04-11</lastmod>
-    </url>
-    <url>
-         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/%E9%A1%B9%E7%9B%AE/</loc>
-         <lastmod>2026-04-11</lastmod>
-    </url>
-    <url>
-         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/ai-%E5%B7%A5%E5%85%B7/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/category/%E7%83%AD%E7%82%B9%E8%A7%A3%E8%AF%BB/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/ai-%E5%B7%A5%E7%A8%8B/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/%E9%A1%B9%E7%9B%AE/</loc>
+         <lastmod>2026-04-28</lastmod>
+    </url>
+    <url>
+         <loc>https://gy-hou.github.io/openresource-wiki/blog/category/ai-%E5%B7%A5%E5%85%B7/</loc>
+         <lastmod>2026-04-28</lastmod>
     </url>
     <url>
          <loc>https://gy-hou.github.io/openresource-wiki/blog/category/ai-%E8%A7%82%E5%AF%9F/</loc>
-         <lastmod>2026-04-11</lastmod>
+         <lastmod>2026-04-28</lastmod>
     </url>
 </urlset>
